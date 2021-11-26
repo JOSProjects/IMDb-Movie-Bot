@@ -17,9 +17,9 @@ Just Add me to Your Group As Admin, Hit The Help Button For More Info.."""
 ➥ Language: Python 𝟹
 ➥ Data Base: MongoDB
 ➥ Bot Server: Railway/Heroku
-➥ Build Status: v1.0.1 [ Beta ]
+➥ Build Status: v1.0.1 [ Beta ]"""
 
-    SOURCE_TXT = """<b>NOTE:</b>
+    SOURCE_TXT = """<b>Source:</b>
 tgmoviebot is a Open source project.
 Source: <a href='https://github.com/josprojects/tgmoviebot'>GitHub - Click here 👈</a>
 
