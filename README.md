@@ -65,7 +65,8 @@ You can deploy this bot anywhere.
      <img height="30px" src="https://railway.app/button.svg">
   </a>
 </p>
-
+<a href="https://youtu.be/h6PtzFYaMxQ"><img src="https://img.shields.io/badge/How%20to%20Deploy%20on%20Railway-blue.svg?logo=Youtube"></a>
+<a href="https://youtu.be/h6PtzFYaMxQ"><img src="https://img.shields.io/youtube/views/h6PtzFYaMxQ?style=social">
 </a>
 </p>
 
