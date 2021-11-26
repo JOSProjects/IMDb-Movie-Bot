@@ -3,9 +3,9 @@ class Script(object):
 
 My name is <a href=https://t.me/{}>{}</a>!
 
-<b>I can provide Movies. A Telegram Auto Filter Bot. Its Easy To Use Me :)</b>
+<b>I can provide Movies. A Telegram Auto Filter Bot. Its Easy To Use Me :)
 
-Just Add me to Your Group As Admin, Hit The Help Button For More Info.."""
+Just Add me to Your Group As Admin, Hit The Help Button For More Info..</b>"""
 
     HELP_TXT = """Hey {}
 
@@ -20,18 +20,21 @@ Just Add me to Your Group As Admin, Hit The Help Button For More Info.."""
 ➥ Build Status: v1.0.1 [ Beta ]"""
 
     SOURCE_TXT = """<b>Source:</b>
-tgmoviebot is a Open source project.
+IMDb is a Open source project.
 Source: <a href='https://github.com/josprojects/tgmoviebot'>GitHub - Click here 👈</a>
 
 <b>DEVS:</b>
-- <a href='https://t.me/josprojects'>Jos Projects</a>"""
+- <a href='https://t.me/josprojects'>Jos Projects</a>
+
+<SUPPORT GROUP
+- <a href='https://t.me/+y53tWFUw6Q43NzE9'>Jos Movie Club</a>"""
 
     MANUALFILTER_TXT = """Help: <b>Filters</b>
 
 - Filter is the feature were users can set automated replies for a particular keyword and Dingdi will respond whenever a keyword is found the message
 
 <b>NOTE:</b>
-1. tgmoviebot should have admin privillage.
+1. IMDb should have admin privillage.
 2. Only admins can add filters in a chat.
 3. Alert buttons have a limit of 64 characters.
 
@@ -47,7 +50,7 @@ Source: <a href='https://github.com/josprojects/tgmoviebot'>GitHub - Click here 
 
 <b>NOTE:</b>
 1. Telegram will not allows you to send buttons without any content, so content is mandatory.
-2. Tgmoviebot supports buttons with any telegram media type.
+2. IMDb supports buttons with any telegram media type.
 3. Buttons should be properly parsed as markdown format.
 
 <b>URL buttons:</b>
@@ -91,7 +94,7 @@ Paste some texts or documents on a website!
 • /paste [reply] - paste the replied text on Pasty
 
 <b>NOTE:</b>
-• tgmoviebot should have admin privillage.
+• IMDb should have admin privillage.
 • These commands works on both pm and group.
 • These commands can be used by any group member."""
 
@@ -103,7 +106,7 @@ Do as you wish with telegra.ph module!
 • /tgmedia or /tgraph - upload supported media (within 5MB) to telegraph.
 
 <b>NOTE:</b>
-• tgmoviebot should have admin privillage.
+• IMDb should have admin privillage.
 • These commands works on both pm and group.
 • These commands can be used by any group member."""
 
@@ -117,7 +120,7 @@ Get information about something!
 • /json - get the json details of a message.
 
 <b>NOTE:</b>
-• tgmoviebot should have admin privillage.
+• IMDb should have admin privillage.
 • These commands works on both pm and group.
 • These commands can be used by any group member."""
 
@@ -129,9 +132,9 @@ Translate texts to a specific language!
 • /tr [language code][reply] - translate replied message to specific language.
 
 <b>NOTE:</b>
-• tgmoviebot should have admin privillage.
+• IMDb should have admin privillage.
 • These commands works on both pm and group.
-• tgmoviebot can translate texts to 200+ languages."""
+• IMDb can translate texts to 200+ languages."""
 
     SEARCH_TXT = """Help: <b>IMDb</b>
 
@@ -142,7 +145,7 @@ Search many things without leaving telegram!
 • /search  - get the film information from various sources.
 
 <b>NOTE:</b>
-• tgmoviebot should have admin privillage.
+• IMDb should have admin privillage.
 • More search tools can be found on inline.
 • Those commands works on both pm and group."""
 
@@ -154,7 +157,7 @@ Need to delete lots of messages? That's what purges are for!
 • /purge - delete all messages from the replied to message, to the current message.
 
 <b>NOTE:</b>
-• tgmoviebot should have admin privillage.
+• IMDb should have admin privillage.
 • These commands works on group.
 • These commands can be used by Only admin."""
 
@@ -176,7 +179,7 @@ This module allows you to do that easily, by exposing some common actions, so ev
 -> <code>/tmute @username 2h</code>
 
 <b>NOTE:</b>
-• tgmoviebot should have admin privillage.
+• IMDb should have admin privillage.
 • These commands works on group.
 • These commands can be used by Only admin."""
 
