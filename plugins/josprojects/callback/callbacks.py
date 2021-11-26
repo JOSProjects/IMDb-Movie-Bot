@@ -319,10 +319,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ],[
             InlineKeyboardButton('search here movie', switch_inline_query_current_chat='')
             ],[
-            InlineKeyboardButton('movie & series studio chat', url='https://t.me/joinchat/TmzDkDEYo65iMmM1')
-            ],[
-            InlineKeyboardButton('Series', url='https://t.me/joinchat/c7IfwgC6AtdiOGM1'),
-            InlineKeyboardButton('Movies', url='https://t.me/joinchat/zqPG0JH27t9jMzI1')
+            InlineKeyboardButton('updates', url='https://t.me/josprojects'),
+            InlineKeyboardButton('movie club', url='https://t.me/+y53tWFUw6Q43NzE9')
             ],[
             InlineKeyboardButton('✗ Close the Menu ✗', callback_data='close_data')
         ]]
