@@ -8,7 +8,7 @@ from pyrogram import (
 from info import (
     ADMINS
 )
-from plugins.dingdi.help_func.admin_check import admin_check
+from plugins.josprojects.help_func.admin_check import admin_check
 
 
 def f_sudo_filter(filt, client, message):
