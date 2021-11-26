@@ -3,7 +3,7 @@ class Script(object):
 
 My name is <a href=https://t.me/{}>{}</a>!
 
-<b>I can provide Movies. A Telegram Auto Filter Bot.Its Easy To Use Me :)</b>
+<b>I can provide Movies. A Telegram Auto Filter Bot. Its Easy To Use Me :)</b>
 
 Just Add me to Your Group As Admin, Hit The Help Button For More Info.."""
 
@@ -43,7 +43,7 @@ Source: <a href='https://github.com/josprojects/tgmoviebot'>GitHub - Click here 
 
     BUTTON_TXT = """Help: <b>Buttons</b>
 
-- tgmoviebot hian both url leh alert inline buttons a Support.
+- tgmoviebot support both url and alert inline buttons.
 
 <b>NOTE:</b>
 1. Telegram will not allows you to send buttons without any content, so content is mandatory.
