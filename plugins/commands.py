@@ -55,6 +55,7 @@ async def start(client, message):
             photo=random.choice(PICS),
             caption=Script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup,
+            quote=True,
             parse_mode='html'
         )
         return
@@ -101,6 +102,7 @@ async def start(client, message):
             photo=random.choice(PICS),
             caption=Script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup,
+            quote=True,
             parse_mode='html'
         )
         return
