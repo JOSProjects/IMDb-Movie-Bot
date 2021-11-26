@@ -1,3 +1,4 @@
+from info import ADMINS
 from script import Messages
 from time import time, sleep
 from pyrogram import Client, filters
