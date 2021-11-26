@@ -44,6 +44,22 @@ You can deploy this bot anywhere.
 </p>
 </details>
 
+<details>
+  <summary><b>Deploy to Railway</b></summary>
+<br/>
+
+<p align="left">
+<a href="https://railway.app/new/template?template=https%3A%2F%2Fgithub.com%2Fjosprojects%2Ftgmoviebot"
+">
+     <img height="30px" src="https://railway.app/button.svg">
+  </a>
+</p>
+
+</a>
+</p>
+
+</details>
+
 <details><summary>Deploy to VPS</summary>
 <p>
 <pre>
