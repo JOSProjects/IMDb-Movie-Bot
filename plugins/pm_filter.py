@@ -802,7 +802,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"Here is what i found for your query {search}"
+        cap = f"<b>🎬 Title:</b>{search}\n\n<b>👥 Requested by: {message.from_user.mention}</b>\n\n<b>© Powered by: <a href='https://t.me/+y53tWFUw6Q43NzE9'>{message.chat.title}</a></b>"
     if imdb and imdb.get('poster'):
         try:
             hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn))
@@ -818,9 +818,15 @@ async def auto_filter(client, msg, spoll=False):
             await message.delete()
         except Exception as e:
             logger.exception(e)
-            await message.reply_photo(photo="https://telegra.ph/file/c318d9d240a07cc8301a8.jpg", caption=cap, reply_markup=InlineKeyboardMarkup(btn))
+            fek = await message.reply_photo(photo="https://telegra.ph/file/c318d9d240a07cc8301a8.jpg", caption=cap, reply_markup=InlineKeyboardMarkup(btn))
+            await asyncio.sleep(300)
+            await fek.delete()
+            await msg.delete()
     else:
-        await message.reply_photo(photo="https://telegra.ph/file/c318d9d240a07cc8301a8.jpg", caption=cap, reply_markup=InlineKeyboardMarkup(btn))
+        fuk = await message.reply_photo(photo="https://telegra.ph/file/c318d9d240a07cc8301a8.jpg", caption=cap, reply_markup=InlineKeyboardMarkup(btn))
+        await asyncio.sleep(300)
+        await fuk.delete()
+        await msg.delete()
     if spoll:
         await msg.message.delete()
         
@@ -829,6 +835,7 @@ async def auto_filter(client, msg, spoll=False):
 async def advantage_spell_chok(msg):
     query = re.sub(r"\b(pl(i|e)*?(s|z+|ease|se|ese|(e+)s(e)?)|((send|snd|giv(e)?|gib)(\sme)?)|movie(s)?|new|latest|br((o|u)h?)*|^h(e|a)?(l)*(o)*|mal(ayalam)?|t(h)?amil|file|that|find|und(o)*|kit(t(i|y)?)?o(w)?|thar(u)?(o)*w?|kittum(o)*|aya(k)*(um(o)*)?|full\smovie|any(one)|with\ssubtitle(s)?)", "", msg.text, flags=re.IGNORECASE) # plis contribute some common words 
     query = query.strip() + " movie"
+    search = msg.text
     g_s = await search_gagala(query)
     g_s += await search_gagala(msg.text)
     gs_parsed = []
@@ -859,8 +866,15 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist)) # removing duplicates
     if not movielist:
-        k = await msg.reply(f"Hey, {msg.from_user.mention}! I couldn't find anything related to that. Check your spelling")
-        await asyncio.sleep(8)
+        hmm = InlineKeyboardMarkup(
+        [
+            [
+                 InlineKeyboardButton("🕵️‍♂️ Search On Google 🕵️‍♂️", url=f"https://google.com/search?q={search}")
+            ]
+        ]
+    )
+        k = await msg.reply(f"Hey, {msg.from_user.mention}!.. Your word <b>{search}</b> is No Movie/Series Related to the Given Word Was Found 🥺\n<s>Please Go to Google and Confirm the Correct Spelling 🥺🙏</s>", reply_markup=hmm)
+        await asyncio.sleep(60)
         await k.delete()
         return
     SPELL_CHECK[msg.message_id] = movielist
