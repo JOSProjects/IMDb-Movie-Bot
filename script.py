@@ -229,15 +229,7 @@ Name - {}"""
 
 <b>Commands and Usage:</b>
 • /inkick - command with required arguments and i will kick members from group.
-• /instatus - to check current status of chat members.
-
-<b>See next page for command information & usages.</b>
-• /dkick - Kick all deleted accounts from group.
-• /inkick (arguments) - Kick inactive members from group.
-Use arguments with caution and seperated by space.
-<b>Arguments</b> - User’s Last Seen & Online status. <b>Can be one of the following:</b> “online”, user is online right now. “offline”, user is currently offline. “recently”, user with hidden last seen time who was online between 1 second and 2-3 days ago. “within_week”, user with hidden last seen time who was online between 2-3 and seven days ago. “within_month”, user with hidden last seen time who was online between 6-7 days and a month ago. “long_time_ago”, blocked user or user with hidden last seen time who was online more than a month ago. None, for bots.
-
-<b>See next page for examples:</b>
+• /instatus - to check current status of chat member from group.
 • /inkick within_month long_time_ago - to kick users who are offline for more than 6-7 days.
 • /inkick long_time_ago - to kick members who are offline for more than a month and Deleted Accounts.
 • /dkick - to kick deleted accounts."""
