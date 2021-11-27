@@ -221,10 +221,9 @@ Added By - {}
 
     LOG_TEXT_P = """#NewUser
 ID - <code>{}</code>
-Name - {}
-"""
+Name - {}"""
 
-     ZOMBIES_TXT = """Help: <b>Zombies</b>
+    ZOMBIES_TXT = """Help: <b>Zombies</b>
 
 <b>Kick incative members from group. Add me as admin with ban users permission in group.</b>
 
@@ -257,4 +256,5 @@ Use arguments with caution and seperated by space.
       
       FETCHING_INFO = """Collecting users information..."""
       
-      STATUS = """{}\nChat Member Status**\n\n```recently``` - {}\n```within_week``` - {}\n```within_month``` - {}\n```long_time_ago``` - {}\nDeleted Account - {}\nBot - {}\nUnCached - {}"""
+      STATUS = """{}\nChat Member Status**\n\n```recently``` - {}\n```within_week``` - {}\n```within_month``` - {}\n```long_time_ago``` - {}\nDeleted Account - {}\nBot - {}\nUnCached - {}
+"""
