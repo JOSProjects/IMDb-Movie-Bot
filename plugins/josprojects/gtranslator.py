@@ -19,11 +19,11 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQ
 from .list import list
 from database.gtrans_mdb import find_one
 
-@Client.on_message(filters.command(["tr", 'translate', 'trans']))
+@Client.on_message(filters.command(["tr"]))
 async def left(client,message):
 	if (message.reply_to_message):
 		try:
-			lgcd = message.text.split("/tr", "/translate", "/trans")
+			lgcd = message.text.split("/tr")
 			lg_cd = lgcd[1].lower().replace(" ", "")
 			tr_text = message.reply_to_message.text
 			translator = Translator()
