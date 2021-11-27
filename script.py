@@ -225,8 +225,7 @@ Name - {}
 """
 
 # ZOMBIES
-class Messages():
-      HELP_MSG = """Help: <b>Zombies</b>
+      ZOMBIES_TXT = """Help: <b>Zombies</b>
 
 <b>Kick incative members from group. Add me as admin with ban users permission in group.</b>
 
