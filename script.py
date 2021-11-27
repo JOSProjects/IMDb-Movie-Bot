@@ -242,19 +242,19 @@ Use arguments with caution and seperated by space.
 • /inkick long_time_ago - to kick members who are offline for more than a month and Deleted Accounts.
 • /dkick - to kick deleted accounts."""
 
-      CREATOR_REQUIRED = """❗You have to be the group creator to do that."""
+    CREATOR_REQUIRED = """❗You have to be the group creator to do that."""
       
-      INPUT_REQUIRED = "❗ **Arguments Required**"
+    INPUT_REQUIRED = "❗ **Arguments Required**"
       
-      KICKED = """✔️ Successfully Kicked {} members according to the arguments provided."""
+    KICKED = """✔️ Successfully Kicked {} members according to the arguments provided."""
       
-      START_KICK = """🚮 Removing inactive members this may take a while..."""
+    START_KICK = """🚮 Removing inactive members this may take a while..."""
       
-      ADMIN_REQUIRED = """❗I am not an admin here\n__Leaving this chat, add me again as admin with ban user permission."""
+    ADMIN_REQUIRED = """❗I am not an admin here\n__Leaving this chat, add me again as admin with ban user permission."""
       
-      DKICK = """✔️ Kicked {} Deleted Accounts Successfully."""
+    DKICK = """✔️ Kicked {} Deleted Accounts Successfully."""
       
-      FETCHING_INFO = """Collecting users information..."""
+    FETCHING_INFO = """Collecting users information..."""
       
-      STATUS = """{}\nChat Member Status**\n\n```recently``` - {}\n```within_week``` - {}\n```within_month``` - {}\n```long_time_ago``` - {}\nDeleted Account - {}\nBot - {}\nUnCached - {}
+    STATUS = """{}\nChat Member Status**\n\n```recently``` - {}\n```within_week``` - {}\n```within_month``` - {}\n```long_time_ago``` - {}\nDeleted Account - {}\nBot - {}\nUnCached - {}
 """
