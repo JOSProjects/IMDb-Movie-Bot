@@ -218,8 +218,10 @@ __🗣 In Order To Get The Movie Requested By You in Our Groups, You Will Have T
 Some dank memes for fun or whatever!
 
 <b>Commands and Usage:</b>
-• /throw an AnimatedDart
-• /roll RollADie
+• /throw or /dart - t𝗈 m𝖺𝗄𝖾 drat 
+• /roll or /dice - roll the dice 
+• /goal or /shoot - to make a goal or shoot
+• /luck or /cownd - Spin the Lucky
 • /runs strings
 
 <b>NOTE:</b>
