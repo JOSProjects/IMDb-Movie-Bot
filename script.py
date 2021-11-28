@@ -213,6 +213,33 @@ __🗣 In Order To Get The Movie Requested By You in Our Groups, You Will Have T
 
 **👇 JOIN THIS CHANNEL & TRY AGAIN 👇**"""
 
+    MEMES_TXT = """Help: <b>Memes</b>
+
+Some dank memes for fun or whatever!
+
+<b>Commands and Usage:</b>
+• /throw an AnimatedDart
+• /roll RollADie
+• /runs strings
+
+<b>NOTE:</b>
+• IMDb should have admin privillage.
+• These commands works on both pm and group."""
+
+    URL_SHORTNER_TXT = """Help: <b>Memes</b>
+
+Some URLs is Shortner
+
+<b>Commands and Usage:</b>
+• /short <code>(link)</code> - I will send the shorted links.
+
+<b>Example:</b>
+<code>/short https://t.me/josprojects</code>
+
+<b>NOTE:</b>
+• Dingdi should have admin privillage.
+• These commands works on both pm and group."""
+
     LOG_TEXT_G = """#NewGroup
 Group = {}(<code>{}</code>)
 Total Members = <code>{}</code>
