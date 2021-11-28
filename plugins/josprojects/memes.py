@@ -65,6 +65,48 @@ async def roll_dice(client, message):
         reply_to_message_id=rep_mesg_id
     )
 
+# LUCK------------ https://telegram.me/Josprojects ------------ #
+
+# EMOJI CONSTANTS
+TRY_YOUR_LUCK = "🎰"
+# EMOJI CONSTANTS
+
+@Client.on_message(
+    filters.command(["luck", "cownd"])
+)
+async def luck_cound(client, message):
+    """ /luck an @animatedluck """
+    rep_mesg_id = message.message_id
+    if message.reply_to_message:
+        rep_mesg_id = message.reply_to_message.message_id
+    await client.send_luck(
+        chat_id=message.chat.id,
+        emoji=TRY_YOUR_LUCK,
+        disable_notification=True,
+        reply_to_message_id=rep_mesg_id
+    )
+
+# GOAL------------ https://telegram.me/Josprojects ------------ #
+
+# EMOJI CONSTANTS
+GOAL_E_MOJI = "⚽"
+# EMOJI CONSTANTS
+
+@Client.on_message(
+    filters.command(["goal", "shoot"])
+)
+async def roll_dice(client, message):
+    """ @Goal """
+    rep_mesg_id = message.message_id
+    if message.reply_to_message:
+        rep_mesg_id = message.reply_to_message.message_id
+    await client.send_dice(
+        chat_id=message.chat.id,
+        emoji=GOAL_E_MOJI,
+        disable_notification=True,
+        reply_to_message_id=rep_mesg_id
+    )
+
 # RUNS------------ https://telegram.me/Josprojects ------------ #
 
 import random
