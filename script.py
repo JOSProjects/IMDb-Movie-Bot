@@ -237,7 +237,7 @@ Some URLs is Shortner
 <code>/short https://t.me/josprojects</code>
 
 <b>NOTE:</b>
-• Dingdi should have admin privillage.
+• IMDb should have admin privillage.
 • These commands works on both pm and group."""
 
     LOG_TEXT_G = """#NewGroup
