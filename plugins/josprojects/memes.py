@@ -74,7 +74,7 @@ TRY_YOUR_LUCK = "🎰"
 @Client.on_message(
     filters.command(["luck", "cownd"])
 )
-async def luck_cound(client, message):
+async def luck_cownd(client, message):
     """ /luck an @animatedluck """
     rep_mesg_id = message.message_id
     if message.reply_to_message:
