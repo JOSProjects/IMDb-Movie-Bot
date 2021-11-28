@@ -10,5 +10,6 @@ asyncio==3.4.3
 aiohttp==3.7.4
 aiofiles
 requests
+pyshorteners
 bs4
 imdbpy
