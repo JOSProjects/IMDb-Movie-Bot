@@ -461,20 +461,22 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('admin', callback_data='admin'),
             InlineKeyboardButton('connect', callback_data='coct'),
-            InlineKeyboardButton('filters', callback_data='auto_manual')
+            InlineKeyboardButton('filters', callback_data='auto_manual'),
             ],[
             InlineKeyboardButton('gtrans', callback_data='gtrans'),
             InlineKeyboardButton('info', callback_data='info'),
-            InlineKeyboardButton('paste', callback_data='paste')
+            InlineKeyboardButton('memes', callback_data='memes'),
             ],[
+            InlineKeyboardButton('paste', callback_data='paste'),
             InlineKeyboardButton('purge', callback_data='purge'),
             InlineKeyboardButton('restric', callback_data='restric'),
-            InlineKeyboardButton('search', callback_data='search')
             ],[
+            InlineKeyboardButton('search', callback_data='search'),
             InlineKeyboardButton('tgraph', callback_data='tgraph'),
-            InlineKeyboardButton('zombies', callback_data='zombies')
+            InlineKeyboardButton('url shortner', callback_data='shortner'),
             ],[
             InlineKeyboardButton('« Back', callback_data='start'),
+            InlineKeyboardButton('zombies', callback_data='zombies'),
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -670,6 +672,28 @@ async def cb_handler(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=Script.RESTRIC_TXT,
+            disable_web_page_preview=True,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+    elif query.data == "memes":
+        buttons = [[
+            InlineKeyboardButton('« Back', callback_data='help')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=Script.MEMES_TXT,
+            disable_web_page_preview=True,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+    elif query.data == "shortner":
+        buttons = [[
+            InlineKeyboardButton('« Back', callback_data='help')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=Script.URL_SHORTNER_TXT,
             disable_web_page_preview=True,
             reply_markup=reply_markup,
             parse_mode='html'
