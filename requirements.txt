@@ -14,3 +14,7 @@ requests
 pyshorteners
 bs4
 imdbpy
+youtube-dl
+youtube_search
+ffmpeg-python
+requests
