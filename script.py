@@ -183,6 +183,19 @@ This module allows you to do that easily, by exposing some common actions, so ev
 • These commands works on group.
 • These commands can be used by Only admin."""
 
+    PIN_MESSAGE_TXT = """Help: <b>Pin Message</b>
+
+All the pin related commands can be found here; keep your chat up to date on the latest news with a simple pinned message!
+
+<b>Commands and Usage:</b>
+• /pin: Pin the message you replied to. Add 'loud' or 'notify' to send a notification to group members.
+• /unpin: Unpin the current pinned message. If used as a reply, unpins the replied to message.
+
+<b>NOTE:</b>
+• IMDb should have admin privillage.
+• These commands works only group.
+• These commands can be used by Only admin."""
+
     ADMIN_TXT = """Help: <b>Admin Mods</b>
 
 <b>NOTE:</b>
