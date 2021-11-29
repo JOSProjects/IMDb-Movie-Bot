@@ -256,6 +256,18 @@ A module to convert text to voice with language support.
 • These commands works on both pm and group.
 • These commands can be used by any group member."""
 
+    MUSIC_TXT = """Help: <b>Music</b>
+
+Music download modules, for those who love music.
+
+<b>Commands and Usage:</b>
+• /song or /mp3 (songname) - download song from yt servers.
+
+<b>NOTE:</b>
+• IMDb should have admin privillage.
+• These commands works on both pm and group.
+• These commands can be used by any group member."""
+
     LOG_TEXT_G = """#NewGroup
 Group = {}(<code>{}</code>)
 Total Members = <code>{}</code>
