@@ -6,6 +6,7 @@ marshmallow==3.12.2
 umongo==3.0.0
 telegraph==1.4.1
 googletrans==3.1.0a0
+gTTS
 asyncio==3.4.3
 aiohttp==3.7.4
 aiofiles
