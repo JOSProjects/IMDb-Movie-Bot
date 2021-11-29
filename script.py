@@ -226,9 +226,10 @@ Some dank memes for fun or whatever!
 
 <b>NOTE:</b>
 • IMDb should have admin privillage.
-• These commands works on both pm and group."""
+• These commands works on both pm and group.
+• These commands can be used by any group member."""
 
-    URL_SHORTNER_TXT = """Help: <b>Memes</b>
+    URL_SHORTNER_TXT = """Help: <b>URL Shortner</b>
 
 Some URLs is Shortner
 
@@ -240,7 +241,20 @@ Some URLs is Shortner
 
 <b>NOTE:</b>
 • IMDb should have admin privillage.
-• These commands works on both pm and group."""
+• These commands works on both pm and group.
+• These commands can be used by any group member."""
+
+    TTS_TXT = """Help: <b>Text to Speech</b>
+
+A module to convert text to voice with language support.
+
+<b>Commands and Usage:</b>
+• /tts - Reply to any text message with language code to convert as audio.
+
+<b>NOTE:</b>
+• IMDb should have admin privillage.
+• These commands works on both pm and group.
+• These commands can be used by any group member."""
 
     LOG_TEXT_G = """#NewGroup
 Group = {}(<code>{}</code>)
