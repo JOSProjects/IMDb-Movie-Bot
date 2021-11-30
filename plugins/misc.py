@@ -195,8 +195,7 @@ async def imdb_callback(bot: Client, query: CallbackQuery):
             poster = imdb['poster'],
             plot = imdb['plot'],
             rating = imdb['rating'],
-            url = imdb['url'],
-            **locals()
+            url = imdb['url']
         )
     else:
         caption = "No Results"
