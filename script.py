@@ -275,6 +275,7 @@ Music download modules, for those who love music.
 
 <b>Commands and Usage:</b>
 • /song or /mp3 (songname) - download song from yt servers.
+• /video or /mp4 (songname) - download video from yt servers.
 
 <b>NOTE:</b>
 • IMDb should have admin privillage.
