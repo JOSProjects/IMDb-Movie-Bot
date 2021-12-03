@@ -22,3 +22,5 @@ wget
 python-arq
 ffmpeg-python
 requests
+ytthumb
+pyrogram
