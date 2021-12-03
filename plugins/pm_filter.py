@@ -468,18 +468,19 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('memes', callback_data='memes'),
             ],[
             InlineKeyboardButton('paste', callback_data='paste'),
+            InlineKeyboardButton('password gen', callback_data='genpassword'),
             InlineKeyboardButton('pin', callback_data='pin'),
-            InlineKeyboardButton('purge', callback_data='purge'),
             ],[
+            InlineKeyboardButton('purge', callback_data='purge'),
             InlineKeyboardButton('restric', callback_data='restric'),
             InlineKeyboardButton('search', callback_data='search'),
-            InlineKeyboardButton('music', callback_data='music'),
             ],[
+            InlineKeyboardButton('music', callback_data='music'),
             InlineKeyboardButton('tt-speech', callback_data='tts'),
             InlineKeyboardButton('tgraph', callback_data='tgraph'),
-            InlineKeyboardButton('url shortner', callback_data='shortner'),
             ],[
             InlineKeyboardButton('« Back', callback_data='start'),
+            InlineKeyboardButton('url shortner', callback_data='shortner'),
             InlineKeyboardButton('zombies', callback_data='zombies'),
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -731,6 +732,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=Script.MUSIC_TXT,
+            disable_web_page_preview=True,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+    elif query.data == "genpassword":
+        buttons = [[
+            InlineKeyboardButton('« Back', callback_data='help')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=Script.PASSWORD_GEN_TXT,
             disable_web_page_preview=True,
             reply_markup=reply_markup,
             parse_mode='html'
