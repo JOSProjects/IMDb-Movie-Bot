@@ -286,6 +286,22 @@ Music download modules, for those who love music.
 • These commands works on both pm and group.
 • These commands can be used by any group member."""
 
+    PASSWORD_GEN_TXT = """Help: <b>Password Generator</b>
+
+There Is Nothing To Know More. Send Me The Limit Of Your Password.
+- I Will Give The Password Of That Limit.
+
+<b>Commands and Usage:</b>
+• /genpassword or /genpw <code>20</code>
+
+<b>NOTE:</b>
+• Only Digits Are Allowed
+• Maximum Allowed Digits Till 84 
+(I Can't Generate Passwords Above The Length 84)
+• IMDb should have admin privillage.
+• These commands works on both pm and group.
+• These commands can be used by any group member."""
+
     LOG_TEXT_G = """#NewGroup
 Group = {}(<code>{}</code>)
 Total Members = <code>{}</code>
