@@ -277,6 +277,11 @@ Music download modules, for those who love music.
 • /song or /mp3 (songname) - download song from yt servers.
 • /video or /mp4 (songname) - download video from yt servers.
 
+<b>YouTube Thumnail Download</b>
+• /ytthumb (youtube link)
+
+<b>Example:</b> <code>/ytthumb https://youtu.be/h6PtzFYaMxQ</code>
+
 <b>NOTE:</b>
 • IMDb should have admin privillage.
 • These commands works on both pm and group.
