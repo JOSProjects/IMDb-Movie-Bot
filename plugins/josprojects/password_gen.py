@@ -21,7 +21,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 @Client.on_message(filters.command(["genpassword", 'genpw']))
 async def password(bot, update):
     message = await update.reply_text(
-    text = "`Processing...`"
+    text = "`Processing...`",
     password = "abcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()_+".lower()
     try:
         limit = int(message.text)
