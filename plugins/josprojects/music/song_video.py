@@ -48,7 +48,7 @@ def a(client, message):
     for i in message.command[1:]:
         query += ' ' + str(i)
     print(query)
-    m = message.reply('`Searching... Please Wait...`')
+    m = message.reply('`Searching... Please Wait...`', reply_to_message_id=message.reply_to_message.message_id)
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = []
@@ -93,7 +93,7 @@ def a(client, message):
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f'🏷 <b>Title:</b> <a href="{link}">{title}</a>\n⏳ <b>Duration:</b> <code>{duration}</code>\n👀 <b>Views:</b> <code>{views}</code>\n🎧 <b>Requested By:</b> {message.from_user.mention()}'
+        rep = f'🏷 <b>Title:</b> <a href="{link}">{title}</a>\n⏳ <b>Duration:</b> <code>{duration}</code>\n👀 <b>Views:</b> <code>{views}</code>\n🎧', reply_to_message_id=message.reply_to_message.message_id)
         secmul, dur, dur_arr = 1, 0, duration.split(':')
         for i in range(len(dur_arr)-1, -1, -1):
             dur += (int(dur_arr[i]) * secmul)
@@ -256,7 +256,7 @@ async def vsong(client, message: Message):
     urlissed = get_text(message)
 
     pablo = await client.send_message(
-        message.chat.id, f"**🔎 Searching..** `{urlissed}`"
+        message.chat.id, f"**🔎 Searching..** `{urlissed}`", reply_to_message_id=message.reply_to_message.message_id)
     )
     if not urlissed:
         await pablo.edit("Invalid Command Syntax Please Check help Menu To Know More!")
@@ -292,10 +292,9 @@ async def vsong(client, message: Message):
         await event.edit(event, f"**Download Failed** \n**Error :** `{str(e)}`")
         return
     c_time = time.time()
-    file_stark = f"{ytdl_data['id']}.mp4"
+    file_stark = f"{ytdl_data['id']}.mp4", reply_to_message_id=message.reply_to_message.message_id)
     capy = f"""
 **🏷️ Video:** [{thum}]({mo})
-**🎬 Requested by:** {message.from_user.mention}
 """
     await client.send_video(
         message.chat.id,
@@ -309,7 +308,7 @@ async def vsong(client, message: Message):
         progress_args=(
             pablo,
             c_time,
-            f"**📥 Download** `{urlissed}`",
+            f"**📥 Download** `{urlissed}`", reply_to_message_id=message.reply_to_message.message_id,
             file_stark,
         ),
     )
