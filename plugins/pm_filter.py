@@ -385,6 +385,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
             f_caption=f_caption
         if f_caption is None:
             f_caption = f"{files.file_name}"
+        buttons = [
+            [
+                InlineKeyboardButton('🙃 projects channel 🙃', url='https://t.me/+WFKaPDiHqjxTSm0c')
+            ]
+            ]
             
         try:
             if AUTH_CHANNEL and not await is_subscribed(client, query):
@@ -397,7 +402,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 await client.send_cached_media(
                     chat_id=query.from_user.id,
                     file_id=file_id,
-                    caption=f_caption
+                    caption=f_caption,
+                    reply_markup=InlineKeyboardMarkup(buttons)
                     )
                 await query.answer(f'Hey {query.from_user.first_name} Check PM, I have sent files in pm',show_alert = True)
         except UserIsBlocked:
@@ -427,11 +433,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f_caption=f_caption
         if f_caption is None:
             f_caption = f"{title}"
+        buttons = [
+            [
+                InlineKeyboardButton('🙃 projects channel 🙃', url='https://t.me/+WFKaPDiHqjxTSm0c')
+            ]
+            ]
         await query.answer()
         await client.send_cached_media(
             chat_id=query.from_user.id,
             file_id=file_id,
-            caption=f_caption
+            caption=f_caption,
+            reply_markup=InlineKeyboardMarkup(buttons)
             )
 
     elif query.data == "pages":
