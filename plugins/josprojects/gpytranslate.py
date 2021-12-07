@@ -113,10 +113,10 @@ async def translategroup(bot, message: Message) -> None:
                 to_translate, sourcelang=language, targetlang=tolanguage
             )
             await message.reply(
-                text=f"`{translation.text}`
-                ),
-                parse_mode="markdown",
+                text=f"```{translation.text}```
                 reply_markup=translated_button,
+                ),
+                parse_mode="markdown"
             )
         elif message.reply_to_message.poll is not None:
             options = "\n".join(
@@ -132,10 +132,10 @@ async def translategroup(bot, message: Message) -> None:
                 to_translate, sourcelang=language, targetlang=tolanguage
             )
             await message.reply(
-                text=f"`{translation.text}`
+                text=f"```{translation.text}```
+                reply_markup=translated_button,
                 ),
                 parse_mode="markdown",
-                reply_markup=translated_button,
             )
     except json.decoder.JSONDecodeError:
         raise google_api_error(text='this is not text or this is google translate api limit, please try again later.')
@@ -156,10 +156,10 @@ async def translategrouptwo(bot, message: Message):
         language = await tr.detect(message.text.split(None, 2)[2])
         translation = await tr(to_translate, sourcelang=language, targetlang=tolanguage)
         await message.reply_text(
-            text=f"`{translation.text}`
+            text=f"```{translation.text}```
+            reply_markup=translated_button,
             ),
             parse_mode="markdown",
-            reply_markup=translated_button,
         )
     except json.decoder.JSONDecodeError:
         raise google_api_error(text='this is not text or this is google translate api limit, please try again later.')
