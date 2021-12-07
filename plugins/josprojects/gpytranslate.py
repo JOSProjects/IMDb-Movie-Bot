@@ -25,7 +25,7 @@ tr = Translator()
 
 translated_button = InlineKeyboardMarkup(
      [[
-     InlineKeyboardButton('translated from {language} to {tolanguage}', url='https://cloud.google.com/translate/docs/languages')
+     InlineKeyboardButton(text=f'translated from {language} to {tolanguage}', url='https://cloud.google.com/translate/docs/languages')
      ]]
  )
 
