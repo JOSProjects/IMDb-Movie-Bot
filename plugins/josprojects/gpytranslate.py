@@ -44,8 +44,7 @@ def logging_errors(f):
         except Exception as e:
             try:
                 await message.reply(
-                    text=f'**Error:**\n\n```{type(e).__name__}```: {e}\n\n **forward this message to https://t.me/JOSPSupport if you see this error again, try to forward your message too for better help**'),
-                    parse_mode="markdown",
+                    text=f'**Error:**\n\n`{type(e).__name__}`: {e}\n\n **forward this message to https://t.me/JOSPSupport if you see this error again, try to forward your message too for better help**'),
                     reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('close this messages', callback_data='close_data')]]
                     disable_web_page_preview=True,
                 )
@@ -113,10 +112,8 @@ async def translategroup(bot, message: Message) -> None:
                 to_translate, sourcelang=language, targetlang=tolanguage
             )
             await message.reply(
-                text=f"```{translation.text}```
-                reply_markup=translated_button,
-                ),
-                parse_mode="markdown"
+                text=f"`{translation.text}`,
+                reply_markup=translated_button
             )
         elif message.reply_to_message.poll is not None:
             options = "\n".join(
@@ -132,10 +129,8 @@ async def translategroup(bot, message: Message) -> None:
                 to_translate, sourcelang=language, targetlang=tolanguage
             )
             await message.reply(
-                text=f"```{translation.text}```
-                reply_markup=translated_button,
-                ),
-                parse_mode="markdown",
+                text=f"`{translation.text}`,
+                reply_markup=translated_button
             )
     except json.decoder.JSONDecodeError:
         raise google_api_error(text='this is not text or this is google translate api limit, please try again later.')
@@ -156,10 +151,8 @@ async def translategrouptwo(bot, message: Message):
         language = await tr.detect(message.text.split(None, 2)[2])
         translation = await tr(to_translate, sourcelang=language, targetlang=tolanguage)
         await message.reply_text(
-            text=f"```{translation.text}```
-            reply_markup=translated_button,
-            ),
-            parse_mode="markdown",
+            text=f"`{translation.text}`,
+            reply_markup=translated_button
         )
     except json.decoder.JSONDecodeError:
         raise google_api_error(text='this is not text or this is google translate api limit, please try again later.')
