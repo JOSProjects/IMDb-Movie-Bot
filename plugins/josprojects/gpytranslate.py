@@ -30,6 +30,13 @@ translated_button = InlineKeyboardMarkup(
  )
 
 
+closed_button = InlineKeyboardMarkup(
+     [[
+     InlineKeyboardButton(text=f'close this messages', callback_data='close_data')
+     ]]
+ )
+
+
 class google_api_error(Exception):
     pass
 
@@ -45,8 +52,8 @@ def logging_errors(f):
             try:
                 await message.reply(
                     text=f'**Error:**\n\n`{type(e).__name__}`: {e}\n\n **forward this message to https://t.me/JOSPSupport if you see this error again, try to forward your message too for better help**'),
-                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('close this messages', callback_data='close_data')]]
-                    disable_web_page_preview=True,
+                    reply_markup=closed_button,
+                    disable_web_page_preview=True
                 )
             except ChatWriteForbidden:
                 await message.chat.leave()
