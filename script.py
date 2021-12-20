@@ -1,11 +1,11 @@
 class Script(object):
     START_TXT = """Hello {},
 
-My name is <a href=https://t.me/{}>{}</a>!
+Mera naam hai <a href=https://t.me/{}>{}</a>!
 
-<b>I can provide Movies. A Telegram Auto Filter Bot. Its Easy To Use Me :)
+<b>Mai aapko Movies & web series lakar dunga 24*7,mujhe use karna behad aasaan hai :)
 
-Just Add me to Your Group As Admin, Hit The Help Button For More Info..</b>"""
+bas mujhe add kijiye apke group me as Admin,aur jadoo dekhiye, Hit The Help Button For More Info..</b>"""
 
     HELP_TXT = """Hey {}
 
@@ -24,10 +24,10 @@ IMDb is a Open source project.
 Source: <a href='https://github.com/josprojects/tgmoviebot'>GitHub - Click here 👈</a>
 
 <b>DEVS:</b>
-- <a href='https://t.me/josprojects'>Jos Projects</a>
+- <a href='https://t.me/mavericksworld'>Maverick080685</a>
 
 <b>SUPPORT GROUP</b>
-- <a href='https://t.me/+y53tWFUw6Q43NzE9'>Jos Movie Club</a>"""
+- <a href='https://t.me/Mavericksworld'>Movies Masti Magic</a>"""
 
     MANUALFILTER_TXT = """Help: <b>Filters</b>
 
