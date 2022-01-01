@@ -18,7 +18,7 @@ async def start(client, message):
     if message.chat.type in ['group', 'supergroup']:
         buttons = [
             [
-                InlineKeyboardButton('updates', url='https://t.me/josprojects')
+                InlineKeyboardButton('OWNER', url='https://t.me/Unavailable4allTime')
             ],
             [
                 InlineKeyboardButton('help', url=f"https://t.me/{temp.U_NAME}?start=help"),
@@ -38,15 +38,15 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, Script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('Add me to your Chat', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('𝙉𝙀𝙒𝙂𝙀𝙉 𝘾𝙄𝙉𝙀𝙈𝘼𝙕𝙕𝙕™', url=f'https://t.me/newgen_cinemazzz')
             ],[
-            InlineKeyboardButton('help', callback_data='help'),
-            InlineKeyboardButton('about', callback_data='about')
+            InlineKeyboardButton('HELP', callback_data='help'),
+            InlineKeyboardButton('ABOUT', callback_data='about')
             ],[
-            InlineKeyboardButton('search here movie', switch_inline_query_current_chat='')
+            InlineKeyboardButton('INLINE MODE', switch_inline_query_current_chat='')
             ],[
-            InlineKeyboardButton('updates', url='https://t.me/josprojects'),
-            InlineKeyboardButton('movie club', url='https://t.me/+y53tWFUw6Q43NzE9')
+            InlineKeyboardButton('NEW MOVIES', url='https://t.me/ngc_new_database_1'),
+            InlineKeyboardButton('OWNER', url='https://t.me/Unavailable4allTime')
             ],[
             InlineKeyboardButton('✗ Close the Menu ✗', callback_data='close_data')
         ]]
@@ -74,7 +74,7 @@ async def start(client, message):
         ]
 
         if message.command[1] != "subscribe":
-            btn.append([InlineKeyboardButton(" 🔄 Try Again 👈 Tap me 🥰", callback_data=f"checksub#{message.command[1]}")])
+            btn.append([InlineKeyboardButton(" 🔄TRY AGAIN,JUST TAP🔄", callback_data=f"checksub#{message.command[1]}")])
         await client.send_message(
             chat_id=message.from_user.id,
             text=Script.FORCESUB_TXT,
@@ -85,15 +85,15 @@ async def start(client, message):
         return
     if len(message.command) ==2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton('Add me to your Chat', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('𝙉𝙀𝙒𝙂𝙀𝙉 𝘾𝙄𝙉𝙀𝙈𝘼𝙕𝙕𝙕™', url=f'https://t.me/newgen_cinemazzz')
             ],[
-            InlineKeyboardButton('help', callback_data='help'),
-            InlineKeyboardButton('about', callback_data='about')
+            InlineKeyboardButton('HELP', callback_data='help'),
+            InlineKeyboardButton('ABOUT', callback_data='about')
             ],[
-            InlineKeyboardButton('search here movie', switch_inline_query_current_chat='')
+            InlineKeyboardButton('INLINE MODE', switch_inline_query_current_chat='')
             ],[
-            InlineKeyboardButton('updates', url='https://t.me/josprojects'),
-            InlineKeyboardButton('movie club', url='https://t.me/+y53tWFUw6Q43NzE9')
+            InlineKeyboardButton('NEW MOVIES', url='https://t.me/ngc_new_database_1'),
+            InlineKeyboardButton('OWNER', url='https://t.me/Unavailable4allTime')
             ],[
             InlineKeyboardButton('✗ Close the Menu ✗', callback_data='close_data')
         ]]
@@ -124,11 +124,11 @@ async def start(client, message):
         f_caption = f"{files.file_name}"
     buttons = [
         [
-            InlineKeyboardButton('support', url='https://t.me/JOSPSupport'),
-            InlineKeyboardButton('channel', url='https://t.me/JosProjects')
+            InlineKeyboardButton('OWNER', url='https://t.me/Unavailable4allTime'),
+            InlineKeyboardButton('MAIN GROUP', url='https://t.me/newgen_cinemazzz')
         ],
         [
-            InlineKeyboardButton('Series & Movie Club', url=f'https://t.me/+y53tWFUw6Q43NzE9')
+            InlineKeyboardButton('SERIES CHANNEL', url=f'https://t.me/newgen_cinemazzz_series')
         ]
         ]
     await client.send_cached_media(
