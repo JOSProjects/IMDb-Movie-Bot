@@ -37,8 +37,8 @@ async def save_group(bot, message):
             await bot.leave_chat(message.chat.id)
             return
         buttons = [[
-            InlineKeyboardButton('help', url=f"https://t.me/{temp.U_NAME}?start=help"),
-            InlineKeyboardButton('updates', url='https:/t.me/JosProjects')
+            InlineKeyboardButton('HELP', url=f"https://t.me/{temp.U_NAME}?start=help"),
+            InlineKeyboardButton('OWNER', url='https://t.me/Unavailable4allTime')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await message.reply_text(
@@ -47,7 +47,7 @@ async def save_group(bot, message):
     else:
         for u in message.new_chat_members:
             zaute = [[
-            InlineKeyboardButton('👉 ⚠️ Press me... 🥰 👈', url="https://t.me/josprojects")
+            InlineKeyboardButton('🕯️മുതലാളി🕯️', url="https://t.me/Unavailable4allTime")
         ]]
             if (temp.MELCOW).get('welcome') is not None:
                 try:
@@ -55,7 +55,7 @@ async def save_group(bot, message):
                 except:
                     pass
             temp.MELCOW['welcome'] = await message.reply_text(
-            text=f"<b>👋 Hi! {u.mention},</b> Welcome to <b>{message.chat.title}</b>\n\n<b>👇 Official Projects Channels 👇</b>",
+            text=f"<b>👋 Hi! {u.mention},</b> Welcome to <b>{message.chat.title}</b>\n\n<b>നിങ്ങൾക് വേണ്ട മൂവീസ് എല്ലാം ഇവിടെ കിട്ടും, അങ്ങനെ കിട്ടുന്നില്ലെങ്കിൽ എന്റെ മുതലാളിയോട് ചോദിച്ചാൽ മതി, മുതലാളി സെറ്റ് ആക്കി തരും😉</b>",
             disable_web_page_preview = True,
             reply_markup=InlineKeyboardMarkup(zaute))
 
