@@ -1,18 +1,18 @@
 class Script(object):
-    START_TXT = """Hello {},
+    START_TXT = """Hey {},
 
-My name is <a href=https://t.me/{}>{}</a>!
+Iam <a href=https://t.me/{}>{}</a>!
 
-<b>I can provide Movies. A Telegram Auto Filter Bot. Its Easy To Use Me :)
+<b>I can provide Movies. And Iam Officially Made for @newgen_cinemazzz :)
 
-Just Add me to Your Group As Admin, Hit The Help Button For More Info..</b>"""
+Don't add me To your Groups, </b>"""
 
     HELP_TXT = """Hey {}
 
 <b>Here Is The Help For My Commands.</b>"""
 
     ABOUT_TXT = """<b>➥ My name: {}
-➥ Creator: Zaute Km
+➥ Creator: ☫𝐴𝑆𝐻𝐼𝐾彡
 ➥ Library: Pyrogram
 ➥ Language: Python 𝟹
 ➥ Data Base: MongoDB
@@ -21,13 +21,13 @@ Just Add me to Your Group As Admin, Hit The Help Button For More Info..</b>"""
 
     SOURCE_TXT = """<b>Source:</b>
 IMDb is a Open source project.
-Source: <a href='https://github.com/josprojects/tgmoviebot'>GitHub - Click here 👈</a>
+Source: <a href='https://github.com/Ashik231/ngc_muthmani'>GitHub - Click here 👈</a>
 
-<b>DEVS:</b>
-- <a href='https://t.me/josprojects'>Jos Projects</a>
+<b>GROUP</b>
+- <a href='https://t.me/newgen_cinemazzz'>𝙉𝙀𝙒𝙂𝙀𝙉 𝘾𝙄𝙉𝙀𝙈𝘼𝙕𝙕𝙕™</a>
 
-<b>SUPPORT GROUP</b>
-- <a href='https://t.me/+y53tWFUw6Q43NzE9'>Jos Movie Club</a>"""
+<b>ADMIN</b>
+- <a href='https://t.me/Unavailable4allTime'>OWNER</a>"""
 
     MANUALFILTER_TXT = """Help: <b>Filters</b>
 
@@ -220,11 +220,11 @@ This module only works for my admins
 <b>Used Storage:</b> <code>{}</code> MiB
 <b>Free Storage:</b> <code>{}</code> MiB"""
 
-    FORCESUB_TXT = """**♦️ READ THIS INSTRUCTION ♦️**
+    FORCESUB_TXT = """**ഇതൊന്നു വായിക്കൂ📄**
 
-__🗣 In Order To Get The Movie Requested By You in Our Groups, You Will Have To Join Our Official Channel First. After That, Try Accessing That Movie Again From Our Group. I'll Send You That Movie Privately 🙈__
+__🗣 താങ്കൾ നമ്മുടെ ഗ്രൂപ്പിൽ നിന്നു select ചെയ്ത മൂവി താങ്കൾക്ക് ലഭിക്കണമെങ്കിൽ, താങ്കൾ നമ്മുടെ New Movies📌 ചാനലിൽ ജോയിൻ ചെയ്യണം. അതിനു ശേഷം മാത്രമേ താങ്കൾക്ക് മൂവി ഞാൻ തരോള്😁. മുതലാളിയുടെ കല്പനകൾ😅__
 
-**👇 JOIN THIS CHANNEL & TRY AGAIN 👇**"""
+**📎JOIN THIS CHANNEL & TRY AGAIN📎**"""
 
     MEMES_TXT = """Help: <b>Memes</b>
 
