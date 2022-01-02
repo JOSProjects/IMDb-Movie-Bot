@@ -380,7 +380,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data.startswith("checksub"):
         if AUTH_CHANNEL and not await is_subscribed(client, query):
-            await query.answer(f"Hey, {query.from_user.first_name}! I Like Your Smartness, But Don't Be Oversmart 😒",show_alert=True)
+            await query.answer(f"Hey, {query.from_user.first_name}! മോനെ ആദ്യം ആ ചാനലിൽ ജോയിൻ ആക്, എന്നിട്ട് ഇതിൽ വന്നു ഞെക്ക്😣",show_alert=True)
             return
         ident, file_id = query.data.split("#")
         files_ = await get_file_details(file_id)
@@ -857,7 +857,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b>🎬 Title:</b> {search}\n</b>\n<b><a href='https://t.me/Unavailable4allTime'>◆മുതലാളി◆</a></b>\n\n<b>✍️ Note:</b> <s>🔘ഈ മെസ്സേജ് 10 മിനുട്ട് വരെയെ ഗ്രൂപ്പിൽ കാണുകയുള്ളൂ🔘</s>"
+        cap = f"<b>🎬 Title:</b> {search}\n</b>\n<b><a href='https://t.me/ngc_new_database_1'>◆NEW MOVIES◆</a></b>\n\n<b>✍️ Note:</b> <s>🔘ഈ മെസ്സേജ് 10 മിനുട്ട് വരെയെ ഗ്രൂപ്പിൽ കാണുകയുള്ളൂ🔘</s>"
     if imdb and imdb.get('poster'):
         try:
             hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_to_message_id=reply_id, reply_markup=InlineKeyboardMarkup(btn))
