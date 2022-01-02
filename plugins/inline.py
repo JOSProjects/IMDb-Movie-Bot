@@ -1,7 +1,7 @@
 import logging
 from pyrogram import Client, emoji, filters
 from pyrogram.errors.exceptions.bad_request_400 import QueryIdInvalid
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, InlineQueryResultCachedDocument
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, InlineQueryResult
 from database.ia_filterdb import get_search_results
 from utils import is_subscribed, get_size
 from info import CACHE_TIME, AUTH_USERS, AUTH_CHANNEL, CUSTOM_FILE_CAPTION
@@ -50,7 +50,7 @@ async def answer(bot, query):
         if f_caption is None:
             f_caption = f"{file.file_name}"
         results.append(
-            InlineQueryResultCachedDocument(
+            InlineQueryResult(
                 title=file.file_name,
                 file_id=file.file_id,
                 caption=f_caption,
