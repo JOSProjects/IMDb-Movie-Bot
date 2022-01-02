@@ -1,9 +1,9 @@
-git+https://github.com/zautekm/pyrogram@inline-m
+pyrogram==1.2.20
 tgcrypto==1.2.2
-pymongo[srv]==3.11.4
-motor==2.4.0
-marshmallow==3.12.2
-umongo==3.0.0
+pymongo[srv]==3.12.3
+motor==2.5.1
+marshmallow==3.14.1
+umongo==3.0.1
 telegraph==1.4.1
 googletrans==3.1.0a0
 gTTS
