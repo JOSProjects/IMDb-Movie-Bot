@@ -117,6 +117,7 @@ async def disable_chat(bot, message):
             text=f'<b>Hello Friends, \nMy admin has told me to leave from group so i go! If you wanna add me again contact my support group.</b> \nReason : <code>{reason}</code>',
             reply_markup=reply_markup)
         await bot.leave_chat(chat_)
+        await message.reply(f"left the chat `{chat}`")
     except Exception as e:
         await message.reply(f"Error - {e}")
 
