@@ -14,7 +14,7 @@
 - [x] ids and User info 
 - [x] Stats, Users, Chats, Ban, Unban, Leave, Disable, Channel
 - [x] Spelling Check Feature
-
+- [x] File Store
 
 ## Variables
 
@@ -41,6 +41,7 @@ add optional larger result buttons:
 ![139601808-04b7726e-3e58-48a1-bb1a-d946f1d3fdcd](https://user-images.githubusercontent.com/77600757/143565860-4797e96f-5a3c-4acd-8484-6fb6a2c99bbc.png)
 * `P_TTI_SHOW_OFF`: Customize Result Buttons to Callback or Url by (True = url / False = callback).
 * `PICS`: Telegraph links of images to show in start message.( Multiple images can be used seperated by space )
+* `FILE_STORE_CHANNEL`: Channel from were file store links of posts should be made. Separate multiple IDs by space
 * Check [info.py](info.py) for more
 
 ## Deploy
@@ -97,6 +98,8 @@ python3 bot.py
 * /delall - delete all filters
 * /deleteall - delete all index(autofilter)
 * /delete - delete a specific file from index.
+* /batch - to create link for multiple posts
+* /link - to create link for one post
 * /info - get user info
 * /id - get tg ids.
 * /imdb - fetch info from imdb.
@@ -112,7 +115,7 @@ python3 bot.py
 • /broadcast - to broadcast a message to all Eva Maria users
 ```
 ## Support
-[![telegram badge](https://img.shields.io/badge/Telegram-Group-30302f?style=flat&logo=telegram)](https://telegram.dog/jospsupportbot)
+[![telegram badge](https://img.shields.io/badge/Telegram-Group-30302f?style=flat&logo=telegram)](https://telegram.dog/JOSPSupport)
 [![telegram badge](https://img.shields.io/badge/Telegram-Channel-30302f?style=flat&logo=telegram)](https://telegram.dog/JosProjects)
 
 ## Credits 
