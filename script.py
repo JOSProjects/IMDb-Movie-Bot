@@ -115,7 +115,7 @@ Do as you wish with telegra.ph module!
 Get information about something!
 
 <b>Commands and Usage:</b>
-• /id - get id of a specifed user.
+• /id - get id of a specified user.
 • /info  - get information about a user.
 • /json - get the json details of a message.
 
