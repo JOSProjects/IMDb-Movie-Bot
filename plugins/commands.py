@@ -5,7 +5,7 @@ import asyncio
 from script import Script
 from pyrogram import Client, filters
 from pyrogram.errors import ChatAdminRequired, FloodWait
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from database.ia_filterdb import Media, get_file_details, unpack_new_file_id
 from database.users_chats_db import db
 from info import CHANNELS, ADMINS, AUTH_CHANNEL, LOG_CHANNEL, PICS, BATCH_FILE_CAPTION, CUSTOM_FILE_CAPTION
@@ -59,7 +59,6 @@ async def start(client, message):
             photo=random.choice(PICS),
             caption=Script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup,
-            quote=True,
             parse_mode='html'
         )
         return
@@ -106,7 +105,6 @@ async def start(client, message):
             photo=random.choice(PICS),
             caption=Script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup,
-            quote=True,
             parse_mode='html'
         )
         return
@@ -173,18 +171,38 @@ async def start(client, message):
         b_string = file_id.split("-", 1)[1]
         decoded = (base64.urlsafe_b64decode(b_string + "=" * (-len(b_string) % 4))).decode("ascii")
         f_msg_id, l_msg_id, f_chat_id = decoded.split("_", 2)
-        msgs_list = list(range(int(f_msg_id), int(l_msg_id)+1))
-        for msg in msgs_list:
-            try:
-                await client.copy_message(chat_id=message.chat.id, from_chat_id=int(f_chat_id), message_id=msg)
-            except FloodWait as e:
-                await asyncio.sleep(e.x)
-                await client.copy_message(chat_id=message.chat.id, from_chat_id=int(f_chat_id), message_id=msg)
-            except Exception as e:
-                logger.exception(e)
+        diff = int(l_msg_id) - int(f_msg_id)
+        async for msg in client.iter_messages(int(f_chat_id), int(l_msg_id), int(f_msg_id)):
+            if msg.media:
+                media = getattr(msg, msg.media)
+                if BATCH_FILE_CAPTION:
+                    try:
+                        f_caption=BATCH_FILE_CAPTION.format(file_name=getattr(media, 'file_name', ''), file_size=getattr(media, 'file_size', ''), file_caption=getattr(msg, 'caption', ''))
+                    except Exception as e:
+                        logger.exception(e)
+                        f_caption = getattr(msg, 'caption', '')
+                try:
+                    await msg.copy(message.chat.id, caption=f_caption)
+                except FloodWait as e:
+                    await asyncio.sleep(e.x)
+                    await msg.copy(message.chat.id, caption=f_caption)
+                except Exception as e:
+                    logger.exception(e)
+                    continue
+            elif msg.empty:
                 continue
+            else:
+                try:
+                    await msg.copy(message.chat.id)
+                except FloodWait as e:
+                    await asyncio.sleep(e.x)
+                    await msg.copy(message.chat.id)
+                except Exception as e:
+                    logger.exception(e)
+                    continue
             await asyncio.sleep(1) 
         return await sts.delete()
+        
 
     files_ = await get_file_details(file_id)           
     if not files_:
