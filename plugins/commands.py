@@ -259,7 +259,19 @@ async def start(client, message):
         file_id=file_id,
         caption=f_caption,
         protect_content=True if pre == 'filep' else False,
-        reply_markup=InlineKeyboardMarkup[[InlineKeyboardButton('support', url='https://t.me/JOSPSupport'),InlineKeyboardButton('channel', url='https://t.me/JosProjects')],[InlineKeyboardButton('Series & Movie Club', url=f'https://t.me/+y53tWFUw6Q43NzE9')]]
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        'support', url='https://t.me/JOSPSupport'),
+                    InlineKeyboardButton(
+                        'channel', url='https://t.me/JosProjects')
+                ],
+                [
+                    InlineKeyboardButton(
+                        'Series & Movie Club', url=f'https://t.me/+y53tWFUw6Q43NzE9')
+                ]
+            ]
         )
                     
 
