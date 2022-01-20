@@ -144,22 +144,22 @@ async def start(client, message):
                     f_caption=f_caption
             if f_caption is None:
                 f_caption = f"{title}"
-            buttons = [
-                [
-                    InlineKeyboardButton('support', url='https://t.me/JOSPSupport'),
-                    InlineKeyboardButton('channel', url='https://t.me/JosProjects')
-                ],
-                [
-                    InlineKeyboardButton('Series & Movie Club', url=f'https://t.me/+y53tWFUw6Q43NzE9')
-                ]
-                ]
+           buttons = [
+               [
+                   InlineKeyboardButton('support', url='https://t.me/JOSPSupport'),
+                   InlineKeyboardButton('channel', url='https://t.me/JosProjects')
+               ],
+               [
+                   InlineKeyboardButton('Series & Movie Club', url=f'https://t.me/+y53tWFUw6Q43NzE9')
+               ]
+               ]
             try:
                 await client.send_cached_media(
                     chat_id=message.from_user.id,
                     file_id=msg.get("file_id"),
                     caption=f_caption,
                     protect_content=msg.get('protect', False),
-                    reply_markup=InlineKeyboardMarkup(buttons),
+                    reply_markup=InlineKeyboardMarkup(buttons)
                     )
             except FloodWait as e:
                 await asyncio.sleep(e.x)
@@ -169,7 +169,6 @@ async def start(client, message):
                     file_id=msg.get("file_id"),
                     caption=f_caption,
                     protect_content=msg.get('protect', False),
-                    reply_markup=InlineKeyboardMarkup(buttons)
                     )
             except Exception as e:
                 logger.warning(e, exc_info=True)
@@ -227,7 +226,6 @@ async def start(client, message):
                 chat_id=message.from_user.id,
                 file_id=file_id,
                 protect_content=True if pre == 'filep' else False,
-                reply_markup=InlineKeyboardMarkup(buttons)
                 )
             filetype = msg.media
             file = getattr(msg, filetype)
@@ -504,7 +502,7 @@ async def settings(client, message):
 
 
 
-@Client.on_message(filters.command(['set_template', 'set']))
+@Client.on_message(filters.command('set_template'))
 async def save_template(client, message):
     sts = await message.reply("Checking template")
     userid = message.from_user.id if message.from_user else None
