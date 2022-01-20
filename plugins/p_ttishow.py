@@ -1,10 +1,10 @@
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.errors.exceptions.bad_request_400 import MessageTooLong, PeerIdInvalid
-from info import ADMINS, LOG_CHANNEL, SUPPORT_CHAT
+from info import ADMINS, LOG_CHANNEL, SUPPORT_CHAT, MELCOW_NEW_USERS
 from database.users_chats_db import db
 from database.ia_filterdb import Media
-from utils import get_size, temp
+from utils import get_size, temp, get_settings
 from script import Script
 from pyrogram.errors import ChatAdminRequired
 
@@ -17,7 +17,7 @@ async def save_group(bot, message):
         if not await db.get_chat(message.chat.id):
             total=await bot.get_chat_members_count(message.chat.id)
             r_j = message.from_user.mention if message.from_user else "Anonymous" 
-            await bot.send_message(LOG_CHANNEL, Script.LOG_TEXT_G.format(message.chat.title, message.chat.id, total, r_j))       
+            await bot.send_message(LOG_CHANNEL, script.LOG_TEXT_G.format(message.chat.title, message.chat.id, total, r_j))       
             await db.add_chat(message.chat.id, message.chat.title)
         if message.chat.id in temp.BANNED_CHATS:
             # Inspired from a boat of a banana tree
@@ -45,19 +45,21 @@ async def save_group(bot, message):
             text=f"<b>Thankyou For Adding Me In {message.chat.title} ❣️\n\nIf you have any questions & doubts about using me contact support.</b>",
             reply_markup=reply_markup)
     else:
-        for u in message.new_chat_members:
-            zaute = [[
-            InlineKeyboardButton('👉 ⚠️ Press me... 🥰 👈', url="https://t.me/josprojects")
-        ]]
-            if (temp.MELCOW).get('welcome') is not None:
-                try:
-                    await (temp.MELCOW['welcome']).delete()
-                except:
-                    pass
-            temp.MELCOW['welcome'] = await message.reply_text(
-            text=f"<b>👋 Hi! {u.mention},</b> Welcome to <b>{message.chat.title}</b>\n\n<b>👇 Official Projects Channels 👇</b>",
-            disable_web_page_preview = True,
-            reply_markup=InlineKeyboardMarkup(zaute))
+        settings = await get_settings(message.chat.id)
+        if settings["welcome"]:
+            for u in message.new_chat_members:
+                buttons = [[
+                InlineKeyboardButton('👉 ⚠️ Press me... 🥰 👈', url="https://t.me/josprojects")
+            ]]
+                if (temp.MELCOW).get('welcome') is not None:
+                    try:
+                        await (temp.MELCOW['welcome']).delete()
+                    except:
+                        pass
+                temp.MELCOW['welcome'] = await message.reply_text(
+                text=f"<b>👋 Hi! {u.mention},</b> Welcome to <b>{message.chat.title}</b>\n\n<b>👇 Official Projects Channels 👇</b>",
+                disable_web_page_preview = True,
+                reply_markup=InlineKeyboardMarkup(buttons))
 
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
@@ -81,6 +83,7 @@ async def leave_a_chat(bot, message):
         )
 
         await bot.leave_chat(chat)
+        await message.reply(f"left the chat `{chat}`")
     except Exception as e:
         await message.reply(f'Error - {e}')
 
@@ -117,7 +120,6 @@ async def disable_chat(bot, message):
             text=f'<b>Hello Friends, \nMy admin has told me to leave from group so i go! If you wanna add me again contact my support group.</b> \nReason : <code>{reason}</code>',
             reply_markup=reply_markup)
         await bot.leave_chat(chat_)
-        await message.reply(f"left the chat `{chat}`")
     except Exception as e:
         await message.reply(f"Error - {e}")
 
@@ -130,9 +132,6 @@ async def re_enable_chat(bot, message):
     try:
         chat_ = int(chat)
     except:
-        return await message.reply('Give Me A Valid Chat ID')
-    sts = await db.get_chat(int(chat))
-    if not sts:
         return await message.reply('Give Me A Valid Chat ID')
     sts = await db.get_chat(int(chat))
     if not sts:
@@ -154,7 +153,7 @@ async def get_ststs(bot, message):
     free = 536870912 - size
     size = get_size(size)
     free = get_size(free)
-    await rju.edit(Script.STATUS_TXT.format(files, total_users, totl_chats, size, free))
+    await rju.edit(script.STATUS_TXT.format(files, total_users, totl_chats, size, free))
 
 
 # a function for trespassing into others groups, Inspired by a Vazha
@@ -176,9 +175,9 @@ async def gen_invite(bot, message):
         return await message.reply(f'Error {e}')
     await message.reply(f'Here is your Invite Link {link.invite_link}')
 
-@Client.on_message(filters.command('ban_users') & filters.user(ADMINS))
+@Client.on_message(filters.command('ban') & filters.user(ADMINS))
 async def ban_a_user(bot, message):
-    # https://t.me/Josprojects/
+    # https://t.me/GetTGLink/4185
     if len(message.command) == 1:
         return await message.reply('Give me a user id / username')
     r = message.text.split(None)
@@ -210,7 +209,7 @@ async def ban_a_user(bot, message):
 
 
     
-@Client.on_message(filters.command('unban_users') & filters.user(ADMINS))
+@Client.on_message(filters.command('unban') & filters.user(ADMINS))
 async def unban_a_user(bot, message):
     if len(message.command) == 1:
         return await message.reply('Give me a user id / username')
@@ -245,7 +244,7 @@ async def unban_a_user(bot, message):
     
 @Client.on_message(filters.command('users') & filters.user(ADMINS))
 async def list_users(bot, message):
-    # https://t.me/josprojects/
+    # https://t.me/GetTGLink/4184
     raju = await message.reply('Getting List Of Users')
     users = await db.get_all_users()
     out = "Users Saved In DB Are:\n\n"
