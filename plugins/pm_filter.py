@@ -349,6 +349,15 @@ async def cb_handler(client: Client, query: CallbackQuery):
             f_caption = f_caption
         if f_caption is None:
             f_caption = f"{files.file_name}"
+        buttons = [
+            [
+                InlineKeyboardButton('support', url='https://t.me/JOSPSupport'),
+                InlineKeyboardButton('channel', url='https://t.me/JosProjects')
+            ],
+            [
+                InlineKeyboardButton('Series & Movie Club', url=f'https://t.me/+y53tWFUw6Q43NzE9')
+            ]
+            ]
             
         try:
             if AUTH_CHANNEL and not await is_subscribed(client, query):
@@ -362,6 +371,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     chat_id=query.from_user.id,
                     file_id=file_id,
                     caption=f_caption,
+                    reply_markup=InlineKeyboardMarkup(buttons),
                     protect_content=True if ident == "filep" else False,
                 )
                 await query.answer(f'Hey {query.from_user.first_name} Check PM, I have sent files in pm',show_alert = True)
@@ -393,26 +403,22 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f_caption = f_caption
         if f_caption is None:
             f_caption = f"{title}"
+        buttons = [
+            [
+                InlineKeyboardButton('support', url='https://t.me/JOSPSupport'),
+                InlineKeyboardButton('channel', url='https://t.me/JosProjects')
+            ],
+            [
+                InlineKeyboardButton('Series & Movie Club', url=f'https://t.me/+y53tWFUw6Q43NzE9')
+            ]
+            ]
         await query.answer()
         await client.send_cached_media(
             chat_id=query.from_user.id,
             file_id=file_id,
             caption=f_caption,
-            protect_content=True if ident == 'checksubp' else False,
-            reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        'support', url='https://t.me/JOSPSupport'),
-                    InlineKeyboardButton(
-                        'channel', url='https://t.me/JosProjects')
-                ],
-                [
-                    InlineKeyboardButton(
-                        'Series & Movie Club', url=f'https://t.me/+y53tWFUw6Q43NzE9')
-                ]
-            ]
-        )
+            reply_markup=InlineKeyboardMarkup(buttons),
+            protect_content=True if ident == 'checksubp' else False
         )
     elif query.data == "pages":
         await query.answer()
