@@ -59,7 +59,7 @@ Source: <a href='https://github.com/josprojects/tgmoviebot'>GitHub - Click here 
 <b>Alert buttons:</b>
 <code>[Button Text](buttonalert:This is an alert message)</code>"""
 
-    FILLINGS_MSG = """Help: <b>Fillings</b>
+    FILLINGS_TXT = """Help: <b>Fillings</b>
 
 You can also customise the contents of your message with contextual data. For example, you could mention a user by name in the filter message, or mention them in a filter!
 
