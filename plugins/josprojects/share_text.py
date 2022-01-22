@@ -16,7 +16,7 @@ async def groupmsg(client, message):
         input_text = reply.text or reply.caption
     else:
         await message.reply_text(
-            text=f"Something went wrong 😑😑,
+            text=f"Something went wrong 😑😑",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
