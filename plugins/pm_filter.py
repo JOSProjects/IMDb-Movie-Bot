@@ -520,8 +520,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "manualfilter":
         buttons = [[
+            InlineKeyboardButton('Buttons', callback_data='auto_manual'),
+            InlineKeyboardButton('Fillings', callback_data='fillings')
+            ],[
             InlineKeyboardButton('« Back', callback_data='auto_manual'),
-            InlineKeyboardButton('Buttons »', callback_data='button')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -755,6 +757,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
             disable_web_page_preview=True,
             reply_markup=reply_markup,
             parse_mode='html'
+        )
+    elif query.data == "fillings":
+        buttons = [[
+            InlineKeyboardButton('« Back', callback_data='manualfilter')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=Script.FILLINGS_TXT,
+            disable_web_page_preview=True,
+            reply_markup=reply_markup,
+            parse_mode='markdown'
         )
     elif query.data == "stats":
         buttons = [[
@@ -1051,6 +1064,7 @@ async def manual_filters(client, message, text=False):
                                  chatname = message.chat.title,
                                  query = name
                              ),
+                             group_id,
                              disable_web_page_preview=True,
                              reply_to_message_id=reply_id
                             )
@@ -1068,6 +1082,7 @@ async def manual_filters(client, message, text=False):
                                     chatname = message.chat.title,
                                     query = name
                                 ),
+                                group_id,
                                 disable_web_page_preview=True,
                                 reply_markup=InlineKeyboardMarkup(button),
                                 reply_to_message_id = reply_id
