@@ -27,7 +27,6 @@ async def groupmsg(client, message):
             ),
             reply_to_message_id=message.message_id
         )
-        )
         return
     await message.reply_text(share_link(input_text))
 
