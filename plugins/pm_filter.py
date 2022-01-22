@@ -767,7 +767,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             text=Script.FILLINGS_TXT,
             disable_web_page_preview=True,
             reply_markup=reply_markup,
-            parse_mode='markdown'
+            parse_mode='html'
         )
     elif query.data == "stats":
         buttons = [[
