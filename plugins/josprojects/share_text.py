@@ -6,7 +6,7 @@ from info import SUPPORT_CHAT
 def share_link(text: str) -> str:
     return "**Here is Your Sharing Text 👇**\n\nhttps://t.me/share/url?url=" + quote(text)
 
-@Client.on_message(filters.command(["sharetext", "st", "stxt", "shtxt", "shtext"]))
+@Client.on_message(filters.command(["share", "sharetext", "st", "stxt", "shtxt", "shtext"]))
 async def groupmsg(client, message):
     k = await message.reply_text("**Making...**")
     reply = message.reply_to_message
