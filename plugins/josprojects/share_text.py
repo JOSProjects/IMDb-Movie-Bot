@@ -27,9 +27,8 @@ async def share_text(client, message):
                     ]                
                 ]
             ),
-            reply_to_message_id=message.message_id
+            reply_to_message_id=reply_id
         )
         return
     await message.reply_text(share_link(input_text), reply_to_message_id=reply_id)
-
         
