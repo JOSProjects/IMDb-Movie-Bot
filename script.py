@@ -12,12 +12,12 @@ Just Add me to Your Group As Admin, Hit The Help Button For More Info..</b>"""
 <b>Here Is The Help For My Commands.</b>"""
 
     ABOUT_TXT = """<b>➥ My name: {}
-➥ Creator: Zaute Km
-➥ Library: Pyrogram
+➥ Creator: <a href='https://t.me/zautekm'>Zaute Km</a>
+➥ Library: <a href='https://docs.pyrogram.org/'>Pyrogram</a>
 ➥ Language: Python 𝟹
-➥ Data Base: MongoDB
-➥ Bot Server: Railway/Heroku
-➥ Build Status: v1.0.1 [ Beta ]"""
+➥ Data Base: <a href='https://www.mongodb.com/'>MongoDB</a>
+➥ Bot Server: <a href='https://heroku.com'>Heroku</a>
+➥ Build Status: v2.0.1 [ Beta ]"""
 
     SOURCE_TXT = """<b>Source:</b>
 IMDb is a Open source project.
@@ -298,6 +298,18 @@ There Is Nothing To Know More. Send Me The Limit Of Your Password.
 • Only Digits Are Allowed
 • Maximum Allowed Digits Till 84 
 (I Can't Generate Passwords Above The Length 84)
+• IMDb should have admin privillage.
+• These commands works on both pm and group.
+• These commands can be used by any group member."""
+
+    SHARE_TXT = """Help: <b>Sharing Text Maker</b>
+
+a bot to create a link to share text in the telegram.
+
+<b>Commands and Usage:</b>
+• /share (text or reply to message)
+
+<b>NOTE:</b>
 • IMDb should have admin privillage.
 • These commands works on both pm and group.
 • These commands can be used by any group member."""
