@@ -18,7 +18,7 @@ async def share_text(client, message):
         input_text = reply.text or reply.caption
     else:
         await message.reply_text(
-            text=f"Something went wrong 😑😑",
+            text=f"**Notice:**\n\n1. Reply Any Messages.\n2. No Media Support\n\n**Any Question Join Support Chat**",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
