@@ -1,5 +1,5 @@
 {
-    "name": "telegram movie bot",
+    "name": "TG-Movie-Bot",
     "description": "When you going to send file on telegram channel this bot will save that in database, So you can search that easily in inline mode",
     "stack": "container",
     "keywords": [
@@ -19,7 +19,7 @@
     "repository": "https://github.com/josprojects/tgmoviebot",
     "env": {
         "BOT_TOKEN": {
-            "description": "Your Bot Token. Get from @BotFather.",
+            "description": "Your bot token.",
             "required": true
         },
         "API_ID": {
