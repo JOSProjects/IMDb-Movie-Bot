@@ -23,7 +23,7 @@ async def start(client, message):
     if message.chat.type in ['group', 'supergroup']:
         buttons = [
             [
-                InlineKeyboardButton('updates', url='https://t.me/josprojects')
+                InlineKeyboardButton('updates', url='https://telegram.me/mallurockersclub')
             ],
             [
                 InlineKeyboardButton('help', url=f"https://t.me/{temp.U_NAME}?start=help"),
@@ -32,7 +32,7 @@ async def start(client, message):
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply(Script.START_TXT.format(message.from_user.mention if message.from_user else message.chat.title, temp.U_NAME, temp.B_NAME), reply_markup=reply_markup)
-        await asyncio.sleep(2) # 😢 https://github.com/EvamariaTG/EvaMaria/blob/master/plugins/p_ttishow.py#L17 😬 wait a bit, before checking.
+        await asyncio.sleep(2) # 😢 https://github.com/NGROCKERS/EvaMaria/blob/master/plugins/p_ttishow.py#L17 😬 wait a bit, before checking.
         if not await db.get_chat(message.chat.id):
             total=await client.get_chat_members_count(message.chat.id)
             await client.send_message(LOG_CHANNEL, Script.LOG_TEXT_G.format(message.chat.title, message.chat.id, total, "Unknown"))       
@@ -50,8 +50,8 @@ async def start(client, message):
             ],[
             InlineKeyboardButton('search here movie', switch_inline_query_current_chat='')
             ],[
-            InlineKeyboardButton('updates', url='https://t.me/josprojects'),
-            InlineKeyboardButton('movie club', url='https://t.me/+y53tWFUw6Q43NzE9')
+            InlineKeyboardButton('updates', url='https://telegram.me/mallurockersclub'),
+            InlineKeyboardButton('Mallurockersclub Movies Bot', url='https://telegram.me/mallurockersclub_bot')
             ],[
             InlineKeyboardButton('✗ Close the Menu ✗', callback_data='close_data')
         ]]
@@ -98,8 +98,8 @@ async def start(client, message):
             ],[
             InlineKeyboardButton('search here movie', switch_inline_query_current_chat='')
             ],[
-            InlineKeyboardButton('updates', url='https://t.me/josprojects'),
-            InlineKeyboardButton('movie club', url='https://t.me/+y53tWFUw6Q43NzE9')
+            InlineKeyboardButton('updates', url='https://telegram.me/mallurockersclub'),
+            InlineKeyboardButton('Mallurockersclub Movies Bot', url='https://telegram.me/mallurockersclub_bot')
             ],[
             InlineKeyboardButton('✗ Close the Menu ✗', callback_data='close_data')
         ]]
@@ -146,11 +146,11 @@ async def start(client, message):
                 f_caption = f"{title}"
             buttons = [
                 [
-                    InlineKeyboardButton('support', url='https://t.me/JOSPSupport'),
-                    InlineKeyboardButton('channel', url='https://t.me/JosProjects')
+                    InlineKeyboardButton('support', url='https://t.me/ngrocker'),
+                    InlineKeyboardButton('Mallurockersclub Movies Bot', url='https://telegram.me/mallurockersclub_bot')
                 ],
                 [
-                    InlineKeyboardButton('Series & Movie Club', url=f'https://t.me/+y53tWFUw6Q43NzE9')
+                    InlineKeyboardButton('Series & Movies', url=f'https://t.me/mallutalkie_bot')
                 ]
                 ]
             try:
@@ -260,11 +260,11 @@ async def start(client, message):
         f_caption = f"{files.file_name}"
     buttons = [
         [
-            InlineKeyboardButton('support', url='https://t.me/JOSPSupport'),
-            InlineKeyboardButton('channel', url='https://t.me/JosProjects')
+            InlineKeyboardButton('support', url='https://t.me/ngrocker'),
+            InlineKeyboardButton('Mallurockersclub Movies Bot', url='https://telegram.me/mallurockersclub_bot')
         ],
         [
-            InlineKeyboardButton('Series & Movie Club', url=f'https://t.me/+y53tWFUw6Q43NzE9')
+            InlineKeyboardButton('Series & Movies', url=f'https://t.me/MALLUTALKIE_bot')
         ]
         ]
     await client.send_cached_media(
@@ -350,7 +350,7 @@ async def delete(bot, message):
         if result.deleted_count:
             await msg.edit('File is successfully deleted from database')
         else:
-            # files indexed before https://github.com/EvamariaTG/EvaMaria/commit/f3d2a1bcb155faf44178e5d7a685a1b533e714bf#diff-86b613edf1748372103e94cacff3b578b36b698ef9c16817bb98fe9ef22fb669R39 
+            # files indexed before https://github.com/NGROCKERS/EvaMaria/commit/f3d2a1bcb155faf44178e5d7a685a1b533e714bf#diff-86b613edf1748372103e94cacff3b578b36b698ef9c16817bb98fe9ef22fb669R39 
             # have original file name.
             result = await Media.collection.delete_many({
                 'file_name': media.file_name,
