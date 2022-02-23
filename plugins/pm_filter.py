@@ -1052,7 +1052,7 @@ async def manual_filters(client, message, text=False):
                 try:
                     if fileid == "None":
                         if btn == "[]":
-                            await message.reply_text(
+                            await client.send_message(
                              reply_text.format(
                                  first = message.from_user.first_name,
                                  last = message.from_user.last_name,
@@ -1070,7 +1070,7 @@ async def manual_filters(client, message, text=False):
                             )
                         else:
                             button = eval(btn)
-                            await message.reply_text(
+                            await client.send_message(
                                 reply_text.format(
                                     first = message.from_user.first_name,
                                     last = message.from_user.last_name,
@@ -1088,7 +1088,7 @@ async def manual_filters(client, message, text=False):
                                 reply_to_message_id = reply_id
                             )
                     elif btn == "[]":
-                        await message.send_cached_media(
+                        await client.send_cached_media(
                             group_id,
                             fileid,
                             caption=reply_text.format(
