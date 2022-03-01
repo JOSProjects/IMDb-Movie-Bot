@@ -144,6 +144,16 @@ Get information about something!
 • These commands works on both pm and group.
 • These commands can be used by any group member."""
 
+    TORRENT_TXT = """Help: <b>Torrent Search</b>
+
+<b>Commands and Usage:</b>
+• /torrent or /tor <movie name>: Get Your Torrent Link From Various Resource.
+
+<b>NOTE:</b>
+• IMDb should have admin privillage.
+• These commands works on both pm and group.
+• These commands can be used by any group member."""
+
     GTRANS_TXT = """Help: <b>Google Translator</b>
 
 Translate texts to a specific language!
