@@ -144,21 +144,11 @@ async def start(client, message):
                     f_caption=f_caption
             if f_caption is None:
                 f_caption = f"{title}"
-            buttons = [
-                [
-                    InlineKeyboardButton('⭕️ Support', url='https://t.me/JOSPSupport'),
-                    InlineKeyboardButton('Channel ⭕️', url='https://t.me/josprojects/221')
-                ],
-                [
-                    InlineKeyboardButton('🎬 Series & Movie Club 🎬', url=f'https://t.me/+y53tWFUw6Q43NzE9')
-                ]
-                ]
             try:
                 await client.send_cached_media(
                     chat_id=message.from_user.id,
                     file_id=msg.get("file_id"),
                     caption=f_caption,
-                    reply_markup=InlineKeyboardMarkup(buttons),
                     protect_content=msg.get('protect', False),
                     )
             except FloodWait as e:
