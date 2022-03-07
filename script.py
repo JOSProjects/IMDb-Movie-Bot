@@ -66,13 +66,12 @@ You can also customise the contents of your message with contextual data. For ex
 <b>Supported fillings:</b>
 - <code>{first}</code>: The user's first name.
 - <code>{last}</code>: The user's last name.
-- <code>{fullname}</code>: The user's full name.
 - <code{username}</code>: The user's username.
 - <code>{mention}</code>: Mentions the user with their firstname.
 - <code>{id}</code>: The user's ID.
 - <code>{dcid}</code>: The user's DC ID.
 - <code>{chatname}</code>: The chat's name.
-- <code>{query}</code>: Any Message Text.
+- <code>{query}</code>: Any Replied Message.
 
 <b>Example:</b>
 <b>- Save a filter using the mention.</b>
