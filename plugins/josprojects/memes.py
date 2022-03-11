@@ -1,6 +1,6 @@
 from pyrogram import Client, filters
 
-# AESTHETIC------------ https://telegram.me/mallurockersclub------------ #
+# AESTHETIC------------ https://telegram.me/Josprojects ------------ #
 
 def aesthetify(string):
     PRINTABLE_ASCII = range(0x21, 0x7f)
@@ -21,7 +21,7 @@ async def aesthetic(client, message):
     text = "".join(aesthetify(text))
     await status_message.edit(text)
 
-# DART------------ https://telegram.me/mallurockersclub ------------ #
+# DART------------ https://telegram.me/Josprojects ------------ #
 
 # EMOJI CONSTANTS
 DART_E_MOJI = "🎯"
@@ -43,7 +43,7 @@ async def throw_dart(client, message):
         reply_to_message_id=rep_mesg_id
     )
 
-# DICE------------ https://telegram.me/mallurockersclub ------------ #
+# DICE------------ https://telegram.me/Josprojects ------------ #
 
 # EMOJI CONSTANTS
 DICE_E_MOJI = "🎲"
@@ -65,7 +65,7 @@ async def roll_dice(client, message):
         reply_to_message_id=rep_mesg_id
     )
 
-# LUCK------------ https://telegram.me/mallurockersclub ------------ #
+# LUCK------------ https://telegram.me/Josprojects ------------ #
 
 # EMOJI CONSTANTS
 TRY_YOUR_LUCK = "🎰"
@@ -86,7 +86,7 @@ async def luck_cownd(client, message):
         reply_to_message_id=rep_mesg_id
     )
 
-# GOAL------------ https://telegram.me/mallurockersclub ------------ #
+# GOAL------------ https://telegram.me/Josprojects ------------ #
 
 # EMOJI CONSTANTS
 GOAL_E_MOJI = "⚽"
@@ -107,7 +107,7 @@ async def roll_dice(client, message):
         reply_to_message_id=rep_mesg_id
     )
 
-# RUNS------------ https://telegram.me/mallurockersclub ------------ #
+# RUNS------------ https://telegram.me/Josprojects ------------ #
 
 import random
 

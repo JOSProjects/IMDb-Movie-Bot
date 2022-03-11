@@ -40,7 +40,7 @@ async def send_thumbnail(bot, update):
         )
         await update.reply_photo(
             photo=thumbnail,
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('join movies channel', url='https://telegram.me/mallurockersclub ')]]),
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('join projects channel', url='https://telegram.me/josprojects')]]),
             quote=True
         )
         await message.delete()
@@ -48,5 +48,5 @@ async def send_thumbnail(bot, update):
         await message.edit_text(
             text="**Please Use** /ytthumb (youtube link)\n\n**Example:** `/ytthumb https://youtu.be/h6PtzFYaMxQ`",
             disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('join movies channel', url='https://telegram.me/mallurockersclub')]])
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('join projects channel', url='https://telegram.me/josprojects')]])
         )
