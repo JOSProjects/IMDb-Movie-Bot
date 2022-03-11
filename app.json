@@ -1,5 +1,5 @@
 {
-    "name": "TG-Movie-Bot",
+    "name": "IMDb-Movie-Bot",
     "description": "When you going to send file on telegram channel this bot will save that in database, So you can search that easily in inline mode",
     "stack": "container",
     "keywords": [
@@ -15,8 +15,8 @@
       "index",
       "inline"
     ],
-    "website": "https://github.com/NGROCKERS/tgmoviebot",
-    "repository": "https://github.com/NGROCKERS/tgmoviebot",
+    "website": "https://github.com/ngrockers/IMDb-Movie-Bot",
+    "repository": "https://github.com/ngrockers/IMDb-Movie-Bot",
     "env": {
         "BOT_TOKEN": {
             "description": "Your bot token.",

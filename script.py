@@ -7,8 +7,7 @@ My name is <a href=https://t.me/{}>{}</a>!
 
 Just Add me to Your Group As Admin, Hit The Help Button For More Info..</b>"""
 
-    HELP_TXT = """Hey {}
-
+     HELP_TXT = """Hey {}
 <b>Here Is The Help For My Commands.</b>"""
 
     ABOUT_TXT = """<b>➥ My name: {}
@@ -22,13 +21,10 @@ Just Add me to Your Group As Admin, Hit The Help Button For More Info..</b>"""
     SOURCE_TXT = """<b>💿 DJ REMIX VIDEOS AND AUDIOS 🎧:</b>
 IMDb is a Open source project.
 Source: <a href='https://t.me/adarshmedias'> ADARSHMEDIAS- Click here 👈</a>
-
 <b>EXTRA 👀:</b>
 - <a href='https://t.me/mallufilmcity'>MOVIES UPDATES</a>
-
 <b>SUPPORT GROUP</b>
-- <a href='https://t.me/malluvillamovies'>Jos Movie Club</a>"""
-
+- <a href='https://t.me/malluvillamovies'>Malluvilla Movies</a>"""
     MANUALFILTER_TXT = """Help: <b>Filters</b>
 
 - Filter is the feature were users can set automated replies for a particular keyword and Dingdi will respond whenever a keyword is found the message
@@ -66,13 +62,12 @@ You can also customise the contents of your message with contextual data. For ex
 <b>Supported fillings:</b>
 - <code>{first}</code>: The user's first name.
 - <code>{last}</code>: The user's last name.
-- <code>{fullname}</code>: The user's full name.
 - <code{username}</code>: The user's username.
 - <code>{mention}</code>: Mentions the user with their firstname.
 - <code>{id}</code>: The user's ID.
 - <code>{dcid}</code>: The user's DC ID.
 - <code>{chatname}</code>: The chat's name.
-- <code>{query}</code>: Any Message Text.
+- <code>{query}</code>: Any Replied Message.
 
 <b>Example:</b>
 <b>- Save a filter using the mention.</b>
@@ -138,6 +133,16 @@ Get information about something!
 • /id - get id of a specified user.
 • /info  - get information about a user.
 • /json - get the json details of a message.
+
+<b>NOTE:</b>
+• IMDb should have admin privillage.
+• These commands works on both pm and group.
+• These commands can be used by any group member."""
+
+    TORRENT_TXT = """Help: <b>Torrent Search</b>
+
+<b>Commands and Usage:</b>
+• /torrent or /tor <movie name>: Get Your Torrent Link From Various Resource.
 
 <b>NOTE:</b>
 • IMDb should have admin privillage.
@@ -270,7 +275,7 @@ Some URLs is Shortner
 • /short <code>(link)</code> - I will send the shorted links.
 
 <b>Example:</b>
-<code>/short https://t.me/josprojects</code>
+<code>/short https://t.me/mallurockersclub</code>
 
 <b>NOTE:</b>
 • IMDb should have admin privillage.
