@@ -64,7 +64,7 @@ You can deploy this bot anywhere.
 <br/>
 
 <p align="left">
-<a href="https://railway.app/new/template?template=https%3A%2F%2Fgithub.com%2Fjosprojects%2Ftgmoviebot"
+<a href="https://railway.app/new/template?template=https%3A%2F%2Fgithub.com%2Fngrockers%2Ftgmoviebot"
 ">
      <img height="30px" src="https://railway.app/button.svg">
   </a>
@@ -79,7 +79,7 @@ You can deploy this bot anywhere.
 <details><summary>Deploy to VPS</summary>
 <p>
 <pre>
-git clone https://github.com/josprojects/tgmoviebot
+git clone https://github.com/ngrockers/tgmoviebot
 # Install Packages
 pip3 install -r requirements.txt
 Edit info.py with variables as given below then run bot
