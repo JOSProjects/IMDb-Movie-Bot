@@ -23,16 +23,16 @@ async def start(client, message):
     if message.chat.type in ['group', 'supergroup']:
         buttons = [
             [
-                InlineKeyboardButton('updates', url='https://telegram.me/mallurockersclub')
+                InlineKeyboardButton('⭕️ Updates ⭕️', url='https://t.me/+GsFSpn-3xgwyYmNk')
             ],
             [
-                InlineKeyboardButton('help', url=f"https://t.me/{temp.U_NAME}?start=help"),
+                InlineKeyboardButton('🛠️ Help', url=f"https://t.me/{temp.U_NAME}?start=help"),
                 InlineKeyboardButton('Close ✗', callback_data="close_data"),
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply(Script.START_TXT.format(message.from_user.mention if message.from_user else message.chat.title, temp.U_NAME, temp.B_NAME), reply_markup=reply_markup)
-        await asyncio.sleep(2) # 😢 https://github.com/NGROCKERS/EvaMaria/blob/master/plugins/p_ttishow.py#L17 😬 wait a bit, before checking.
+        await client.send_sticker(chat_id=message.chat.id, sticker='CAACAgUAAxkBAAJ1k2IfDr7l8Hat1d-s1mnbBEsFXZWJAAL5BAACAdz5VOVw2x38ZZJ1HgQ', reply_markup=reply_markup, reply_to_message_id=message.message_id)
+        await asyncio.sleep(60)
         if not await db.get_chat(message.chat.id):
             total=await client.get_chat_members_count(message.chat.id)
             await client.send_message(LOG_CHANNEL, Script.LOG_TEXT_G.format(message.chat.title, message.chat.id, total, "Unknown"))       
@@ -43,17 +43,23 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, Script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('Add me to your Chat', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('➕ Add me to your Chat ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('help', callback_data='help'),
-            InlineKeyboardButton('about', callback_data='about')
+            InlineKeyboardButton('⭕️ Help', callback_data='help'),
+            InlineKeyboardButton('About ⭕️', callback_data='about')
             ],[
-            InlineKeyboardButton('search here movie', switch_inline_query_current_chat='')
+            InlineKeyboardButton('🕵️ Search here Movie 🕵️', switch_inline_query_current_chat='')
+            ],
+[
+              [
+                InlineKeyboardButton("⭕️ Movies Watch and Download", url="https://t.me/+GsFSpn-3xgwyYmNk"),
+                InlineKeyboardButton("Movies Download  ⭕️", url="https://t.me/+eQEpIgvQwlo2ZDc0")
+            ],
+            [
+                InlineKeyboardButton('🎬 Series & Movie Club 🎬', url=f'https://t.me/+UGGrObrnpIDK1qqq')
+            ]
             ],[
-            InlineKeyboardButton('updates', url='https://telegram.me/mallurockersclub'),
-            InlineKeyboardButton('Mallurockersclub Movies Bot', url='https://telegram.me/mallurockersclub_bot')
-            ],[
-            InlineKeyboardButton('✗ Close the Menu ✗', callback_data='close_data')
+            InlineKeyboardButton('❌ Close the Menu ❌', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -91,17 +97,23 @@ async def start(client, message):
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton('Add me to your Chat', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('➕ Add me to your Chat ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('help', callback_data='help'),
-            InlineKeyboardButton('about', callback_data='about')
+            InlineKeyboardButton('⭕️ Help', callback_data='help'),
+            InlineKeyboardButton('About ⭕️', callback_data='about')
             ],[
-            InlineKeyboardButton('search here movie', switch_inline_query_current_chat='')
+            InlineKeyboardButton('🕵️ Search here Movie 🕵️', switch_inline_query_current_chat='')
+            ],
+[
+              [
+                InlineKeyboardButton("⭕️ Movies Watch and Download", url="https://t.me/+GsFSpn-3xgwyYmNk"),
+                InlineKeyboardButton("Movies Download  ⭕️", url="https://t.me/+eQEpIgvQwlo2ZDc0")
+            ],
+            [
+                InlineKeyboardButton('🎬 Series & Movie Club 🎬', url=f'https://t.me/+UGGrObrnpIDK1qqq')
+            ]
             ],[
-            InlineKeyboardButton('updates', url='https://telegram.me/mallurockersclub'),
-            InlineKeyboardButton('Mallurockersclub Movies Bot', url='https://telegram.me/mallurockersclub_bot')
-            ],[
-            InlineKeyboardButton('✗ Close the Menu ✗', callback_data='close_data')
+            InlineKeyboardButton('❌ Close the Menu ❌', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -144,21 +156,11 @@ async def start(client, message):
                     f_caption=f_caption
             if f_caption is None:
                 f_caption = f"{title}"
-            buttons = [
-                [
-                    InlineKeyboardButton('support', url='https://t.me/ngrocker'),
-                    InlineKeyboardButton('Mallurockersclub Movies Bot', url='https://telegram.me/mallurockersclub_bot')
-                ],
-                [
-                    InlineKeyboardButton('Series & Movies', url=f'https://t.me/mallutalkie_bot')
-                ]
-                ]
             try:
                 await client.send_cached_media(
                     chat_id=message.from_user.id,
                     file_id=msg.get("file_id"),
                     caption=f_caption,
-                    reply_markup=InlineKeyboardMarkup(buttons),
                     protect_content=msg.get('protect', False),
                     )
             except FloodWait as e:
@@ -258,15 +260,16 @@ async def start(client, message):
             f_caption=f_caption
     if f_caption is None:
         f_caption = f"{files.file_name}"
-    buttons = [
-        [
-            InlineKeyboardButton('support', url='https://t.me/ngrocker'),
-            InlineKeyboardButton('Mallurockersclub Movies Bot', url='https://telegram.me/mallurockersclub_bot')
-        ],
-        [
-            InlineKeyboardButton('Series & Movies', url=f'https://t.me/MALLUTALKIE_bot')
-        ]
-        ]
+    buttons = 
+[
+              [
+                InlineKeyboardButton("⭕️ Movies Watch and Download", url="https://t.me/+GsFSpn-3xgwyYmNk"),
+                InlineKeyboardButton("Movies Download  ⭕️", url="https://t.me/+eQEpIgvQwlo2ZDc0")
+            ],
+            [
+                InlineKeyboardButton('🎬 Series & Movie Club 🎬', url=f'https://t.me/+UGGrObrnpIDK1qqq')
+            ]
+            ]
     await client.send_cached_media(
         chat_id=message.from_user.id,
         file_id=file_id,
@@ -350,7 +353,7 @@ async def delete(bot, message):
         if result.deleted_count:
             await msg.edit('File is successfully deleted from database')
         else:
-            # files indexed before https://github.com/NGROCKERS/EvaMaria/commit/f3d2a1bcb155faf44178e5d7a685a1b533e714bf#diff-86b613edf1748372103e94cacff3b578b36b698ef9c16817bb98fe9ef22fb669R39 
+            # files indexed before https://github.com/ngrockers/EvaMaria/commit/f3d2a1bcb155faf44178e5d7a685a1b533e714bf#diff-86b613edf1748372103e94cacff3b578b36b698ef9c16817bb98fe9ef22fb669R39 
             # have original file name.
             result = await Media.collection.delete_many({
                 'file_name': media.file_name,

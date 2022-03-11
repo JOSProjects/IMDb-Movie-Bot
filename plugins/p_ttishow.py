@@ -8,7 +8,7 @@ from utils import get_size, temp, get_settings
 from script import Script
 from pyrogram.errors import ChatAdminRequired
 
-"""-----------------------------------------https://telegram.me/mallurockersclub --------------------------------------"""
+"""-----------------------------------------https://t.me/mallurockersclub --------------------------------------"""
 
 @Client.on_message(filters.new_chat_members & filters.group)
 async def save_group(bot, message):
@@ -37,8 +37,8 @@ async def save_group(bot, message):
             await bot.leave_chat(message.chat.id)
             return
         buttons = [[
-            InlineKeyboardButton('help', url=f"https://t.me/{temp.U_NAME}?start=help"),
-            InlineKeyboardButton('updates', url='https://telegram.me/mallurockersclub')
+            InlineKeyboardButton('ℹ️ Help', url=f"https://t.me/{temp.U_NAME}?start=help"),
+            InlineKeyboardButton('Updates 📢', url='https://t.me/mallurockersclub')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await message.reply_text(
@@ -49,7 +49,7 @@ async def save_group(bot, message):
         if settings["welcome"]:
             for u in message.new_chat_members:
                 buttons = [[
-                InlineKeyboardButton('👉 ⚠️ Press me... 🥰 👈', url="https://telegram.me/mallurockersclub")
+                InlineKeyboardButton('👉 ⚠️ Press me... 🥰 👈', url="https://t.me/+GsFSpn-3xgwyYmNk")
             ]]
                 if (temp.MELCOW).get('welcome') is not None:
                     try:
@@ -57,10 +57,9 @@ async def save_group(bot, message):
                     except:
                         pass
                 temp.MELCOW['welcome'] = await message.reply_text(
-                text=f"<b>👋 Hi! {u.mention},</b> Welcome to <b>{message.chat.title}</b>\n\n<b>👇 Official Movies 🎥 Channels 👇</b>",
+                text=f"<b>👋 Hi! {u.mention},</b> Welcome to <b>{message.chat.title}</b>\n\n<b>👇 Official movie Channels 👇</b>",
                 disable_web_page_preview = True,
                 reply_markup=InlineKeyboardMarkup(buttons))
-
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
 async def leave_a_chat(bot, message):
@@ -244,7 +243,7 @@ async def unban_a_user(bot, message):
     
 @Client.on_message(filters.command('users') & filters.user(ADMINS))
 async def list_users(bot, message):
-    # https://telegram.me/mallurockersclub------------
+    # https://t.me/Josprojects/
     raju = await message.reply('Getting List Of Users')
     users = await db.get_all_users()
     out = "Users Saved In DB Are:\n\n"
