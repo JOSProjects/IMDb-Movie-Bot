@@ -110,7 +110,7 @@ async def next_page(bot, query):
 async def advantage_spoll_choker(bot, query):
     _, user, movie_ = query.data.split('#')
     if int(user) != 0 and query.from_user.id != int(user):
-        return await query.answer(f"⚠️ Hey, {query.from_user.first_name}! Search Your Own File, Don't Click Others Results 😬", show_alert=True)
+        return await query.answer(f"⚠️ Hey, {query.from_user.first_name}! എന്തിനാ മോനെ മറ്റുള്ളവരുടെ റിപ്ലയിൽ വന്നു നെക്കുന്നത്‌, സ്വന്തമായി എന്തേലും ചെയ്യ്...😬", show_alert=True)
     if movie_  == "close_spellcheck":
         return await query.message.delete()
     movies = SPELL_CHECK.get(query.message.reply_to_message.message_id)
@@ -123,7 +123,7 @@ async def advantage_spoll_choker(bot, query):
         k = (movie, files, offset, total_results)
         await auto_filter(bot, query, k)
     else:
-        k = await query.message.edit(f'⚠️ Hey, {query.from_user.first_name}! This Movie Not Found In My DataBase ⚠️')
+        k = await query.message.edit(f'⚠️ Hey, {query.from_user.first_name}! താങ്കൾ ചോദിച്ച സിനിമ എന്റെ ഡാറ്റാബേസിൽ ഇല്ല, മുതലാളിയോട് ചോദിച്ചു നോക്കു😣 ⚠️')
         await asyncio.sleep(10)
         await k.delete()
     
@@ -349,10 +349,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [
             [
                 InlineKeyboardButton('OWNER', url='https://t.me/Unavailable4allTime'),
-                InlineKeyboardButton('NEW MOVIES', url='https://t.me/ngc_new_database_1')
+                InlineKeyboardButton('NEW MOVIES', url='https://t.me/Team_NGC')
             ],
             [
-                InlineKeyboardButton('SERIES CHANNEL', url=f'https://t.me/newgen_cinemazzz_series')
+                InlineKeyboardButton('SERIES CHANNEL', url=f'https://t.me/NGCseries1')
             ]
             ]
             
@@ -401,10 +401,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [
             [
                 InlineKeyboardButton('OWNER', url='https://t.me/Unavailable4allTime'),
-                InlineKeyboardButton('NEW MOVIES', url='https://t.me/ngc_new_database_1')
+                InlineKeyboardButton('NEW MOVIES', url='https://t.me/Team_NGC')
             ],
             [
-                InlineKeyboardButton('SERIES CHANNEL', url=f'https://t.me/newgen_cinemazzz_series')
+                InlineKeyboardButton('SERIES CHANNEL', url=f'https://t.me/NGCseries1')
             ]
             ]
         await query.answer()
