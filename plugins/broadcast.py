@@ -7,7 +7,7 @@ from utils import broadcast_messages
 import asyncio
         
 @Client.on_message(filters.command("broadcast") & filters.user(ADMINS) & filters.reply)
-# https://t.me/JosProjects
+# https://t.me/moviehtv
 async def verupikkals(bot, message):
     users = await db.get_all_users()
     b_msg = message.reply_to_message
