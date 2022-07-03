@@ -37,7 +37,7 @@ async def next_page(bot, query):
 
     ident, req, key, offset = query.data.split("_")
     if int(req) not in [query.from_user.id, 0]:
-        return await query.answer(f"⚠️ Hey, {query.from_user.first_name}! Search Your Own File, Don't Click Others Results 😬", show_alert=True)
+        return await query.answer(f"⚠️ Hey, {query.from_user.first_name}! മകനെ നില്ല്🖐️, സ്വന്തമായി സെർച്ച് ചെയ്ത് എടുക്കൂ വത്സ😬", show_alert=True)
     try:
         offset = int(offset)
     except:
@@ -123,7 +123,7 @@ async def advantage_spoll_choker(bot, query):
         k = (movie, files, offset, total_results)
         await auto_filter(bot, query, k)
     else:
-        k = await query.message.edit(f'⚠️ Hey, {query.from_user.first_name}! താങ്കൾ ചോദിച്ച സിനിമ എന്റെ ഡാറ്റാബേസിൽ ഇല്ല, മുതലാളിയോട് ചോദിച്ചു നോക്കു😣 ⚠️')
+        k = await query.message.edit(f'⚠️ Hey, {query.from_user.first_name}! താങ്കൾ ചോദിച്ച സിനിമ എന്റെ ഡാറ്റാബേസിൽ ഇല്ല, മുതലാളിയോട് ചോദിച്ചു നോക്കു😣 👉 @Unavailable4allTime 👈')
         await asyncio.sleep(10)
         await k.delete()
     
@@ -348,11 +348,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
             f_caption = f"{files.file_name}"
         buttons = [
             [
-                InlineKeyboardButton('OWNER', url='https://t.me/Anonymousbro36'),
-                InlineKeyboardButton('NEW MOVIES', url='https://t.me/tester627')
+                InlineKeyboardButton('OWNER', url='https://t.me/Unavailable4allTime'),
+                InlineKeyboardButton('NEW MOVIES', url='https://t.me/Team_NGC')
             ],
             [
-                InlineKeyboardButton('colLection', url=f'https://t.me/tester627')
+                InlineKeyboardButton('SERIES CHANNEL', url=f'https://t.me/NGCseries1')
             ]
             ]
             
@@ -400,11 +400,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
             f_caption = f"{title}"
         buttons = [
             [
-                InlineKeyboardButton('OWNER', url='https://t.me/Anonymousbro36'),
-                InlineKeyboardButton('NEW MOVIES', url='https://t.me/tester627')
+                InlineKeyboardButton('OWNER', url='https://t.me/Unavailable4allTime'),
+                InlineKeyboardButton('NEW MOVIES', url='https://t.me/Team_NGC')
             ],
             [
-                InlineKeyboardButton('collections', url='https://t.me/tester627')
+                InlineKeyboardButton('SERIES CHANNEL', url='https://t.me/NGCseries1')
             ]
             ]
         await query.answer()
@@ -426,8 +426,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ],[
             InlineKeyboardButton('INLINE MODE', switch_inline_query_current_chat='')
             ],[
-            InlineKeyboardButton('NEW MOVIES', url='https://t.me/tester627'),
-            InlineKeyboardButton('OWNER', url='https://t.me/Anonymousbro36')
+            InlineKeyboardButton('NEW MOVIES', url='https://t.me/Team_NGC'),
+            InlineKeyboardButton('OWNER', url='https://t.me/Unavailable4allTime')
             ],[
             InlineKeyboardButton('✗CLOSE THIS MENU✗', callback_data='close_data')
         ]]
@@ -857,7 +857,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b>🎬 Title:</b> {search}\n</b>\n<b><a href='https://t.me/Anonymousbro36'>◆Creater◆</a></b>\n\n<b>✍️ Note:</b> <s>🔘This message Deleted within 10 Minutes🔘</s>"
+        cap = f"<b>🎬 Title:</b> {search}\n</b>\n<b><a href='https://t.me/Unavailable4allTime'>★𝙈𝘼𝙎𝙏𝙀𝙍 𝘽𝙍𝘼𝙄𝙉★</a></b>\n\n<b>✍️ Note:</b> <s>yuu</s>"
     if imdb and imdb.get('poster'):
         try:
             hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_to_message_id=reply_id, reply_markup=InlineKeyboardMarkup(btn))
