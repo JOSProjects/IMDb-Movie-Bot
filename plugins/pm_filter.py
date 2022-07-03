@@ -419,7 +419,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer()
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton('movie request', url=f'https://t.me/MalyalammoviesTeam')
+            InlineKeyboardButton('𝙉𝙀𝙒𝙂𝙀𝙉 𝘾𝙄𝙉𝙀𝙈𝘼𝙕𝙕𝙕™', url=f'https://t.me/newgen_cinemazzz')
             ],[
             InlineKeyboardButton('HELP', callback_data='help'),
             InlineKeyboardButton('ABOUT', callback_data='about')
@@ -857,29 +857,29 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b>🎬 Title:</b> {search}\n</b>\n<b><a href='https://t.me/Unavailable4allTime'>★𝙈𝘼𝙎𝙏𝙀𝙍 𝘽𝙍𝘼𝙄𝙉★</a></b>\n\n<b>✍️ Note:</b> <s>yuu</s>"
+        cap = f"<b>🎬 Title:</b> {search}\n</b>\n<b><a href='https://t.me/Unavailable4allTime'>★𝙈𝘼𝙎𝙏𝙀𝙍 𝘽𝙍𝘼𝙄𝙉★</a></b>\n\n<b>ʰᵃᵛᵉ ᵃ ⁿⁱᶜᵉ ᵈᵃʸ</b> <>ꜱʜᴀʀɪɴɢ ᴏꜰ ᴛʜɪꜱ ɢʀᴏᴜᴘ ᴡɪᴛʜ ʏᴏᴜʀ ꜰʀɪᴇɴᴅꜱ ᴡᴏᴜʟᴅ ʙᴇ ᴀᴍᴀᴢɪɴɢ🙂<>"
     if imdb and imdb.get('poster'):
         try:
             hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_to_message_id=reply_id, reply_markup=InlineKeyboardMarkup(btn))
-            await asyncio.sleep(600)
+            await asyncio.sleep(864000)
             await hehe.delete()
             await message.delete()
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             pic = imdb.get('poster')
             poster = pic.replace('.jpg', "._V1_UX360.jpg")
             hmm = await message.reply_photo(photo=poster, caption=cap, reply_to_message_id=reply_id, reply_markup=InlineKeyboardMarkup(btn))
-            await asyncio.sleep(600)
+            await asyncio.sleep(864000)
             await hmm.delete()
             await message.delete()
         except Exception as e:
             logger.exception(e)
             fek = await message.reply_photo(photo="https://telegra.ph/file/82b5bbbab6d5e5593b6b2.jpg", caption=cap, reply_to_message_id=reply_id, reply_markup=InlineKeyboardMarkup(btn))
-            await asyncio.sleep(600)
+            await asyncio.sleep(864000)
             await fek.delete()
             await msg.delete()
     else:
         fuk = await message.reply_photo(photo="https://telegra.ph/file/8b42f6caf6ef5fd76766f.jpg", caption=cap, reply_to_message_id=reply_id, reply_markup=InlineKeyboardMarkup(btn))
-        await asyncio.sleep(600)
+        await asyncio.sleep(864000)
         await fuk.delete()
         await msg.delete()
     if spoll:
@@ -929,7 +929,7 @@ async def advantage_spell_chok(msg):
         ]
     )
         k = await msg.reply(f"Hey, {msg.from_user.mention}!.. Your word <b>{search}</b> is No Movie/Series Related to the Given Word Was Found 🥺\n\n<s>Please Go to Google and Confirm the Correct Spelling 🥺🙏</s>", reply_markup=hmm)
-        await asyncio.sleep(500000)
+        await asyncio.sleep(20)
         await k.delete()
         return
     SPELL_CHECK[msg.message_id] = movielist
@@ -941,7 +941,7 @@ async def advantage_spell_chok(msg):
             ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="✗ Close ✗", callback_data=f'spolling#{user}#close_spellcheck')])
     m = await msg.reply(f"Hey, {msg.from_user.mention}!\nI couldn't find anything related to that\nDid you mean any one of these?", reply_markup=InlineKeyboardMarkup(btn))
-    await asyncio.sleep(500000)
+    await asyncio.sleep(20)
     await m.delete()
 
 
