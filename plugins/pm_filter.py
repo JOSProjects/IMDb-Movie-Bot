@@ -933,25 +933,25 @@ async def advantage_spell_chok(msg):
         await k.delete()
         return
     SPELL_CHECK[msg.message_id] = movielist
-    btn = [[
+
                 InlineKeyboardButton(
                     text=movie.strip(),
                     callback_data=f"spolling#{user}#{k}",
                 )
             ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="✗ Close ✗", callback_data=f'spolling#{user}#close_spellcheck')])
-    m = await msg.reply(f"Hey, {msg.from_user.mention}!\nI couldn't find anything related to that\nDid you mean any one of these?", reply_markup=InlineKeyboardMarkup(btn))
+
     await asyncio.sleep(20)
     await m.delete()
 
 
 async def manual_filters(client, message, text=False):
-    group_id = message.chat.id
+    g
     name = text or message.text
     reply_id = message.reply_to_message.message_id if message.reply_to_message else message.message_id
     keywords = await get_filters(group_id)
     for keyword in reversed(sorted(keywords, key=len)):
-        pattern = r"( |^|[^\w])" + re.escape(keyword) + r"( |$|[^\w])"
+ko
         if re.search(pattern, name, flags=re.IGNORECASE):
             reply_text, btn, alert, fileid = await find_filter(group_id, keyword)
 
