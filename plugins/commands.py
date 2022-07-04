@@ -45,7 +45,7 @@ async def start(client, message):
             ],[
             InlineKeyboardButton('INLINE MODE', switch_inline_query_current_chat='')
             ],[
-            InlineKeyboardButton('NEW MOVIES', url='https://t.me/ngc_new_database_1'),
+            InlineKeyboardButton('NEW MOVIES', url='https://t.me/Team_NGC'),
             InlineKeyboardButton('OWNER', url='https://t.me/Unavailable4allTime')
             ],[
             InlineKeyboardButton('✗ Close the Menu ✗', callback_data='close_data')
@@ -92,7 +92,7 @@ async def start(client, message):
             ],[
             InlineKeyboardButton('INLINE MODE', switch_inline_query_current_chat='')
             ],[
-            InlineKeyboardButton('NEW MOVIES', url='https://t.me/ngc_new_database_1'),
+            InlineKeyboardButton('NEW MOVIES', url='https://t.me/Team_NGC'),
             InlineKeyboardButton('OWNER', url='https://t.me/Unavailable4allTime')
             ],[
             InlineKeyboardButton('✗ Close the Menu ✗', callback_data='close_data')
@@ -128,7 +128,7 @@ async def start(client, message):
             InlineKeyboardButton('MAIN GROUP', url='https://t.me/newgen_cinemazzz')
         ],
         [
-            InlineKeyboardButton('SERIES CHANNEL', url=f'https://t.me/newgen_cinemazzz_series')
+            InlineKeyboardButton('SERIES CHANNEL', url=f'https://t.me/NGCseries1')
         ]
         ]
     await client.send_cached_media(
