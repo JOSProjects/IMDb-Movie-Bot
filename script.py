@@ -20,14 +20,14 @@ My Official Name is <a href=https://t.me/{}>{}</a>!
 ➥ Build Status: v1.0.1 [ Beta ]"""
 
     SOURCE_TXT = """<b>Source:</b>
-IMDb is a Open source project.
-Source: <a href='https://github.com/Ashik231/ngc_muthmani'>GitHub - Click here 👈</a>
+𝙉𝙂𝘾_𝙋𝙍𝙊-𝙑𝙀𝙍𝙎𝙄𝙊𝙉 is a Closed source project by @Unavailable4allTime
+Source: <a href='https://telegra.ph/file/e3f71c7bc1eddecbe41ee.jpg'>ɢɪᴛʜᴜʙ - ᴄʟɪᴄᴋ ʜᴇʀᴇ</a>
 
 <b>GROUP</b>
 - <a href='https://t.me/newgen_cinemazzz'>𝙉𝙀𝙒𝙂𝙀𝙉 𝘾𝙄𝙉𝙀𝙈𝘼𝙕𝙕𝙕™</a>
 
 <b>ADMIN</b>
-- <a href='https://t.me/Unavailable4allTime'>OWNER</a>"""
+- <a href='https://t.me/Unavailable4allTime'>©ᴍᴀ𝘴ᴛᴇʀ ʙʀᴀɪɴ</a>"""
 
     MANUALFILTER_TXT = """Help: <b>Filters</b>
 
