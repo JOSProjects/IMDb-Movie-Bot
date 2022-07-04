@@ -20,7 +20,7 @@ My Official Name is <a href=https://t.me/{}>{}</a>!
 ➥ Build Status: v1.0.1 [ Beta ]"""
 
     SOURCE_TXT = """<b>Source:</b>
-𝙉𝙂𝘾_𝙋𝙍𝙊-𝙑𝙀𝙍𝙎𝙄𝙊𝙉 is a Closed source project by @Unavailable4allTime
+𝙉𝙂𝘾_𝙋𝙍𝙊-𝙑𝙀𝙍𝙎𝙄𝙊𝙉 ɪꜱ ᴀ ᴄʟᴏꜱᴇᴅ ꜱᴏᴜʀᴄᴇ ᴘʀᴏᴊᴇᴄᴛ ʙʏ ᴍʏ ᴀᴅᴍɪɴ...
 Source: <a href='https://telegra.ph/file/e3f71c7bc1eddecbe41ee.jpg'>ɢɪᴛʜᴜʙ - ᴄʟɪᴄᴋ ʜᴇʀᴇ</a>
 
 <b>GROUP</b>
