@@ -171,7 +171,7 @@ async def search_gagala(text):
 async def get_settings(group_id):
     settings = temp.SETTINGS.get(group_id)
     if not settings:
-        settings = await db.get_settings(group_id)
+        
         temp.SETTINGS[group_id] = settings
     return settings
     
