@@ -1,10 +1,10 @@
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.errors.exceptions.bad_request_400 import MessageTooLong, PeerIdInvalid
-from info import ADMINS, LOG_CHANNEL, SUPPORT_CHAT
+from info import ADMINS, LOG_CHANNEL, SUPPORT_CHAT, MELCOW_NEW_USERS
 from database.users_chats_db import db
 from database.ia_filterdb import Media
-from utils import get_size, temp
+from utils import get_size, temp, get_settings
 from script import Script
 from pyrogram.errors import ChatAdminRequired
 
@@ -37,28 +37,29 @@ async def save_group(bot, message):
             await bot.leave_chat(message.chat.id)
             return
         buttons = [[
-            InlineKeyboardButton('HELP', url=f"https://t.me/{temp.U_NAME}?start=help"),
-            InlineKeyboardButton('OWNER', url='https://t.me/Unavailable4allTime')
+            InlineKeyboardButton('✆𝐻𝑒𝑙𝑝✆', url=f"https://t.me/{temp.U_NAME}?start=help"),
+            InlineKeyboardButton('𝑂𝑤𝑛𝑒𝑟 📢', url='https://t.me/Unavailable4allTime')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await message.reply_text(
-            text=f"<b>Thankyou For Adding Me In {message.chat.title} ❣️\n\nIf you have any questions & doubts about using me contact support.</b>",
+            text=f"<b>Thankyou For Adding Me In {message.chat.title} ❣️\n\nIf you have any questions & doubts about using me contact Owner.</b>",
             reply_markup=reply_markup)
     else:
-        for u in message.new_chat_members:
-            zaute = [[
-            InlineKeyboardButton('🕯️മുതലാളി🕯️', url="https://t.me/Unavailable4allTime")
-        ]]
-            if (temp.MELCOW).get('welcome') is not None:
-                try:
-                    await (temp.MELCOW['welcome']).delete()
-                except:
-                    pass
-            temp.MELCOW['welcome'] = await message.reply_text(
-            text=f"<b>👋 Hi! {u.mention},</b> Welcome to <b>{message.chat.title}</b>\n\n<b>നിങ്ങൾക് വേണ്ട മൂവീസ് എല്ലാം ഇവിടെ കിട്ടും, അങ്ങനെ കിട്ടുന്നില്ലെങ്കിൽ എന്റെ മുതലാളിയോട് ചോദിച്ചാൽ മതി, മുതലാളി സെറ്റ് ആക്കി തരും😉</b>",
-            disable_web_page_preview = True,
-            reply_markup=InlineKeyboardMarkup(zaute))
-
+        settings = await get_settings(message.chat.id)
+        if settings["welcome"]:
+            for u in message.new_chat_members:
+                buttons = [[
+                InlineKeyboardButton('⇘മുതലാളി⇙', url="https://t.me/Unavailable4allTime")
+            ]]
+                if (temp.MELCOW).get('welcome') is not None:
+                    try:
+                        await (temp.MELCOW['welcome']).delete()
+                    except:
+                        pass
+                temp.MELCOW['welcome'] = await message.reply_text(
+                text=f"<b>👋 ഹായ്! {u.mention},</b> 𝑊𝑒𝑙𝑐𝑜𝑚𝑒 𝑇𝑜 <b>{message.chat.title}</b>\n\n<b>അങ്ങനെ അവസാനം നിങ്ങൾ എത്തേണ്ട സ്ഥലത്തു തന്നെയാണ് എത്തിയിരിക്കുന്നത്😻,ഇവിടെ നിങ്ങൾക്ക് വേണ്ട എല്ലാ സിനിമയും ലഭിക്കും,അങ്ങനെ കിട്ടുന്നിലെങ്കിൽ താഴെ മുതലാളിയെ mention ചെയ്തിട്ടുണ്ട്,ചോദിച്ചാൽ മതി കിട്ടും😼</b>",
+                disable_web_page_preview = True,
+                reply_markup=InlineKeyboardMarkup(buttons))
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
 async def leave_a_chat(bot, message):
@@ -81,6 +82,7 @@ async def leave_a_chat(bot, message):
         )
 
         await bot.leave_chat(chat)
+        await message.reply(f"left the chat `{chat}`")
     except Exception as e:
         await message.reply(f'Error - {e}')
 
@@ -106,7 +108,7 @@ async def disable_chat(bot, message):
         return await message.reply(f"This chat is already disabled:\nReason-<code> {cha_t['reason']} </code>")
     await db.disable_chat(int(chat_), reason)
     temp.BANNED_CHATS.append(int(chat_))
-    await message.reply('Chat Succesfully Disabled')
+    await message.reply('Chat Successfully Disabled')
     try:
         buttons = [[
             InlineKeyboardButton('Support', url=f'https://t.me/{SUPPORT_CHAT}')
@@ -132,15 +134,12 @@ async def re_enable_chat(bot, message):
         return await message.reply('Give Me A Valid Chat ID')
     sts = await db.get_chat(int(chat))
     if not sts:
-        return await message.reply('Give Me A Valid Chat ID')
-    sts = await db.get_chat(int(chat))
-    if not sts:
         return await message.reply("Chat Not Found In DB !")
     if not sts.get('is_disabled'):
         return await message.reply('This chat is not yet disabled.')
     await db.re_enable_chat(int(chat_))
     temp.BANNED_CHATS.remove(int(chat_))
-    await message.reply("Chat Succesfully re-enabled")
+    await message.reply("Chat Successfully re-enabled")
 
 
 @Client.on_message(filters.command('stats') & filters.incoming)
@@ -175,9 +174,9 @@ async def gen_invite(bot, message):
         return await message.reply(f'Error {e}')
     await message.reply(f'Here is your Invite Link {link.invite_link}')
 
-@Client.on_message(filters.command('ban_users') & filters.user(ADMINS))
+@Client.on_message(filters.command('ban_user') & filters.user(ADMINS))
 async def ban_a_user(bot, message):
-    # https://t.me/Josprojects/
+    # https://t.me/Unavailable4allTime/
     if len(message.command) == 1:
         return await message.reply('Give me a user id / username')
     r = message.text.split(None)
@@ -205,11 +204,11 @@ async def ban_a_user(bot, message):
             return await message.reply(f"{k.mention} is already banned\nReason: {jar['ban_reason']}")
         await db.ban_user(k.id, reason)
         temp.BANNED_USERS.append(k.id)
-        await message.reply(f"Succesfully banned {k.mention}")
+        await message.reply(f"Successfully banned {k.mention}")
 
 
     
-@Client.on_message(filters.command('unban_users') & filters.user(ADMINS))
+@Client.on_message(filters.command('unban_user') & filters.user(ADMINS))
 async def unban_a_user(bot, message):
     if len(message.command) == 1:
         return await message.reply('Give me a user id / username')
@@ -238,13 +237,13 @@ async def unban_a_user(bot, message):
             return await message.reply(f"{k.mention} is not yet banned.")
         await db.remove_ban(k.id)
         temp.BANNED_USERS.remove(k.id)
-        await message.reply(f"Succesfully unbanned {k.mention}")
+        await message.reply(f"Successfully unbanned {k.mention}")
 
 
     
 @Client.on_message(filters.command('users') & filters.user(ADMINS))
 async def list_users(bot, message):
-    # https://t.me/josprojects/
+    # https://t.me/Unavailable4allTime/
     raju = await message.reply('Getting List Of Users')
     users = await db.get_all_users()
     out = "Users Saved In DB Are:\n\n"
