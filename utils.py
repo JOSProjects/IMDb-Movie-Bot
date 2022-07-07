@@ -38,6 +38,7 @@ class temp(object):
     MELCOW = {}
     U_NAME = None
     B_NAME = None
+    SETTINGS = {}
 
 async def is_subscribed(bot, query):
     try:
@@ -83,7 +84,7 @@ async def get_poster(query, bulk=False, id=False, file=None):
             return movieid
         movieid = movieid[0].movieID
     else:
-        movieid = int(query)
+        movieid = query
     movie = imdb.get_movie(movieid)
     if movie.get("original air date"):
         date = movie["original air date"]
@@ -135,7 +136,7 @@ async def get_poster(query, bulk=False, id=False, file=None):
 async def broadcast_messages(user_id, message):
     try:
         await message.copy(chat_id=user_id)
-        return True, "Succes"
+        return True, "Success"
     except FloodWait as e:
         await asyncio.sleep(e.x)
         return await broadcast_messages(user_id, message)
@@ -167,8 +168,19 @@ async def search_gagala(text):
     return [title.getText() for title in titles]
 
 
-
-
+async def get_settings(group_id):
+    settings = temp.SETTINGS.get(group_id)
+    if not settings:
+        settings = await db.get_settings(group_id)
+        temp.SETTINGS[group_id] = settings
+    return settings
+    
+async def save_group_settings(group_id, key, value):
+    current = await get_settings(group_id)
+    current[key] = value
+    temp.SETTINGS[group_id] = current
+    await db.update_settings(group_id, current)
+    
 def get_size(size):
     """Get size in readable format"""
 
