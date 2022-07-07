@@ -1,33 +1,34 @@
 class Script(object):
-    START_TXT = """Hey {},
+    START_TXT = """Hello {},
 
-My Official Name is <a href=https://t.me/{}>{}</a>!
+ᴍʏ ᴏꜰꜰɪᴄɪᴀʟ ɴᴀᴍᴇ ɪꜱ <a href=https://t.me/{}>{}</a>!
 
-<b>എനിക്ക് നിങ്ങൾക്ക് സിനിമകൾ തരാൻ കഴിയും, എന്നെ @newgen_cinemazzz എന്ന ഗ്രൂപ്പിൽ പ്രവർത്തിക്കാൻ വേണ്ടി മാത്രമാണ് ഉണ്ടാക്കിയിരിക്കുന്നത്☺️ :)
+<b>ɪ ᴄᴀɴ ɢɪᴠᴇ ʏᴏᴜ ᴍᴏᴠɪᴇꜱ ᴀɴᴅ ꜱᴇʀɪᴇꜱ,ᴀɴᴅ ɪᴀᴍ ᴏꜰꜰɪᴄɪᴀʟʟʏ ᴍᴀᴅᴇ ꜰᴏʀ ᴛʜɪꜱ ɢʀᴏᴜᴘ @newgen_cinemazzz)
 
-ഇതാണ് എന്റെ മുതലാളി➡️@Unavailable4allTime </b>"""
+ʏᴏᴜ ᴄᴀɴ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘꜱ, ɪᴛ'ꜱ ɴᴏᴛ ᴀ ᴘʀᴏʙʟᴇᴍ, ᴀᴅᴅ ᴍᴇ ᴀꜱ ɢʀᴏᴜᴘ ᴀᴅᴍɪɴ ᴀɴᴅ ɪ ᴡɪʟʟ ᴘʀᴏᴠɪᴅᴇ ᴍᴏᴠɪᴇꜱ...</b>"""
 
-    HELP_TXT = """Hey {}
+    HELP_TXT = """ᕼᗩI {}
 
-<b>Here Is The Help For My Commands.</b>"""
+<b>𝐻𝑒𝑟𝑒 𝑖𝑠 𝑚𝑦 𝐻𝑒𝑙𝑝 𝐶𝑜𝑚𝑚𝑎𝑛𝑑𝑠.</b>"""
 
-    ABOUT_TXT = """<b>➥ My name: {}
-➥ Creator: ☫𝐴𝑆𝐻𝐼𝐾彡
-➥ Library: Pyrogram
-➥ Language: Python 𝟹
-➥ Data Base: MongoDB
-➥ Bot Server: Railway/Heroku
-➥ Build Status: v1.0.1 [ Beta ]"""
+    ABOUT_TXT = """<b>➥ 𝑀𝑦 𝑁𝑎𝑚𝑒: {}
+➥ 𝑂𝑤𝑛𝑒𝑟: <a href='https://t.me/Unavailable4allTime'>𝐴𝑠ℎ𝑖𝑘 𝑀ℎ𝑑</a>
+➥ 𝐿𝑖𝑏𝑟𝑎𝑟𝑦: <a href='https://docs.pyrogram.org/'>Pyrogram</a>
+➥ 𝐿𝑎𝑛𝑔𝑢𝑎𝑔𝑒: Python 𝟹
+➥ 𝐷𝑎𝑡𝑎 𝐵𝑎𝑠𝑒: <a href='https://www.mongodb.com/'>MongoDB</a>
+➥ 𝐵𝑜𝑡 𝑆𝑒𝑟𝑣𝑒𝑟: <a href='https://heroku.com'>Heroku</a>
+➥ 𝑉𝑒𝑟𝑠𝑖𝑜𝑛: v2.0.1 [ Beta ]"""
 
-    SOURCE_TXT = """<b>Source:</b>
-𝙉𝙂𝘾_𝙋𝙍𝙊-𝙑𝙀𝙍𝙎𝙄𝙊𝙉 ɪꜱ ᴀ ᴄʟᴏꜱᴇᴅ ꜱᴏᴜʀᴄᴇ ᴘʀᴏᴊᴇᴄᴛ ʙʏ ᴍʏ ᴀᴅᴍɪɴ...
-Source: <a href='https://telegra.ph/file/e3f71c7bc1eddecbe41ee.jpg'>ɢɪᴛʜᴜʙ - ᴄʟɪᴄᴋ ʜᴇʀᴇ</a>
+    SOURCE_TXT = """<b>𝑆𝑜𝑢𝑟𝑐𝑒:</b>
+𝑁𝐺𝐶 𝐼𝑚𝑑𝑏 𝐵𝑜𝑡𝑠 𝑎𝑟𝑒 𝑇𝑟𝑢𝑒𝑙𝑦 𝐿𝑜𝑐𝑘𝑒𝑑 𝑃𝑟𝑜𝑗𝑒𝑐𝑡𝑠...
 
-<b>GROUP</b>
-- <a href='https://t.me/newgen_cinemazzz'>𝙉𝙀𝙒𝙂𝙀𝙉 𝘾𝙄𝙉𝙀𝙈𝘼𝙕𝙕𝙕™</a>
+𝑆𝑜𝑢𝑟𝑐𝑒 𝐶𝑜𝑑𝑒: <a href='https://telegra.ph/file/e3f71c7bc1eddecbe41ee.jpg'>𝑆𝑜𝑢𝑟𝑐𝑒 𝐶𝑜𝑑𝑒 - 𝐶𝑙𝑖𝑐𝑘 𝐻𝑒𝑟𝑒 👈</a>
 
-<b>ADMIN</b>
-- <a href='https://t.me/Unavailable4allTime'>©ᴍᴀ𝘴ᴛᴇʀ ʙʀᴀɪɴ</a>"""
+<b>𝑶𝒘𝒏𝒆𝒓:</b>
+- <a href='https://t.me/Unavailable4allTime'>𝐴𝑠ℎ𝑖𝑘 𝑀ℎ𝑑</a>
+
+<b>𝑀𝑎𝑖𝑛 𝐺𝑟𝑜𝑢𝑝</b>
+- <a href='https://t.me/newgen_cinemazzz'>𝙉𝙀𝙒𝙂𝙀𝙉 𝘾𝙄𝙉𝙀𝙈𝘼𝙕𝙕𝙕™</a>"""
 
     MANUALFILTER_TXT = """Help: <b>Filters</b>
 
@@ -54,10 +55,29 @@ Source: <a href='https://telegra.ph/file/e3f71c7bc1eddecbe41ee.jpg'>ɢɪᴛʜᴜ
 3. Buttons should be properly parsed as markdown format.
 
 <b>URL buttons:</b>
-<code>[Button Text](buttonurl:https://t.me/josprojects)</code>
+<code>[Button Text](buttonurl:https://t.me/Unavailable4allTime)</code>
 
 <b>Alert buttons:</b>
 <code>[Button Text](buttonalert:This is an alert message)</code>"""
+
+    FILLINGS_TXT = """Help: <b>Fillings</b>
+
+You can also customise the contents of your message with contextual data. For example, you could mention a user by name in the filter message, or mention them in a filter!
+
+<b>Supported fillings:</b>
+- <code>{first}</code>: The user's first name.
+- <code>{last}</code>: The user's last name.
+- <code{username}</code>: The user's username.
+- <code>{mention}</code>: Mentions the user with their firstname.
+- <code>{id}</code>: The user's ID.
+- <code>{dcid}</code>: The user's DC ID.
+- <code>{chatname}</code>: The chat's name.
+- <code>{query}</code>: Any Replied Message.
+
+<b>Example:</b>
+<b>- Save a filter using the mention.</b>
+-> <code>/filter test Hello {mention} This Is your Username : {username} And This Is your ID : {id}.</code>
+"""
 
     AUTOFILTER_TXT = """Help: <b>Auto Filter</b>
 
@@ -115,9 +135,19 @@ Do as you wish with telegra.ph module!
 Get information about something!
 
 <b>Commands and Usage:</b>
-• /id - get id of a specifed user.
+• /id - get id of a specified user.
 • /info  - get information about a user.
 • /json - get the json details of a message.
+
+<b>NOTE:</b>
+• IMDb should have admin privillage.
+• These commands works on both pm and group.
+• These commands can be used by any group member."""
+
+    TORRENT_TXT = """Help: <b>Torrent Search</b>
+
+<b>Commands and Usage:</b>
+• /torrent or /tor <movie name>: Get Your Torrent Link From Various Resource.
 
 <b>NOTE:</b>
 • IMDb should have admin privillage.
@@ -220,11 +250,11 @@ This module only works for my admins
 <b>Used Storage:</b> <code>{}</code> MiB
 <b>Free Storage:</b> <code>{}</code> MiB"""
 
-    FORCESUB_TXT = """**ഇതൊന്നു വായിക്കൂ📄**
+    FORCESUB_TXT = """**▷𝑅𝑒𝑎𝑑 𝑇ℎ𝑖𝑠 𝑀𝑒𝑠𝑠𝑎𝑔𝑒◁**
 
-__🗣 താങ്കൾ നമ്മുടെ ഗ്രൂപ്പിൽ നിന്നു select ചെയ്ത മൂവി താങ്കൾക്ക് ലഭിക്കണമെങ്കിൽ, താങ്കൾ നമ്മുടെ New Movies📌 എന്ന ചാനലിൽ ജോയിൻ ചെയ്യണം. അതിനു ശേഷം മാത്രമേ താങ്കൾക്ക് മൂവി ഞാൻ തരോള്😁. മുതലാളിയുടെ കല്പനകൾ😅__
+__🗣 താങ്കൾ ഗ്രൂപ്പിൽ നിന്ന്‌ തിരഞ്ഞെടുത്ത മൂവി താങ്കൾക്ക് ലഭിക്കണമെങ്കിൽ താഴെ കൊടുത്തിരിക്കുന്ന ചാനലിൽ ജോയിൻ ആകുക😊,ശേഷം Start ഞെക്കുക,മുതലാളിയുടെ കല്പനകൾ😹__
 
-**🔄JOIN CHANNEL & TRY AGAIN🔄**"""
+**⇩𝐽𝑜𝑖𝑛 𝑇ℎ𝑖𝑠 𝐶ℎ𝑎𝑛𝑛𝑒𝑙 𝑎𝑛𝑑 𝑇𝑟𝑦 𝐴𝑔𝑎𝑖𝑛⇩**"""
 
     MEMES_TXT = """Help: <b>Memes</b>
 
@@ -298,6 +328,18 @@ There Is Nothing To Know More. Send Me The Limit Of Your Password.
 • Only Digits Are Allowed
 • Maximum Allowed Digits Till 84 
 (I Can't Generate Passwords Above The Length 84)
+• IMDb should have admin privillage.
+• These commands works on both pm and group.
+• These commands can be used by any group member."""
+
+    SHARE_TXT = """Help: <b>Sharing Text Maker</b>
+
+a bot to create a link to share text in the telegram.
+
+<b>Commands and Usage:</b>
+• /share (text or reply to message)
+
+<b>NOTE:</b>
 • IMDb should have admin privillage.
 • These commands works on both pm and group.
 • These commands can be used by any group member."""
