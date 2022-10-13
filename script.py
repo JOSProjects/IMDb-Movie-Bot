@@ -3,7 +3,7 @@ class Script(object):
 
 My name is <a href=https://t.me/{}>{}</a>!
 
-<b>I can provide Kannada Scenepacks. A Telegram Auto Filter Bot. Its Easy To Use Me :)</b>"""
+<b>I can provide Kannada Scenepacks. A Telegram Filter Bot. Its Easy To Use Me :)</b>"""
 
     HELP_TXT = """Hey {}
 
