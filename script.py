@@ -3,21 +3,13 @@ class Script(object):
 
 My name is <a href=https://t.me/{}>{}</a>!
 
-<b>I can provide Movies. A Telegram Auto Filter Bot. Its Easy To Use Me :)
-
-Just Add me to Your Group As Admin, Hit The Help Button For More Info..</b>"""
+<b>I can provide Kannada Scenepacks. A Telegram Auto Filter Bot. Its Easy To Use Me :)</b>"""
 
     HELP_TXT = """Hey {}
 
 <b>Here Is The Help For My Commands.</b>"""
 
-    ABOUT_TXT = """<b>➥ My name: {}
-➥ Creator: <a href='https://t.me/zautekm'>Zaute Km</a>
-➥ Library: <a href='https://docs.pyrogram.org/'>Pyrogram</a>
-➥ Language: Python 𝟹
-➥ Data Base: <a href='https://www.mongodb.com/'>MongoDB</a>
-➥ Bot Server: <a href='https://heroku.com'>Heroku</a>
-➥ Build Status: v2.0.1 [ Beta ]"""
+
 
     SOURCE_TXT = """<b>Source:</b>
 IMDb is a Open source project.
@@ -251,7 +243,7 @@ This module only works for my admins
 
     FORCESUB_TXT = """**♦️ READ THIS INSTRUCTION ♦️**
 
-__🗣 In Order To Get The Movie Requested By You in Our Groups, You Will Have To Join Our Official Channel First. After That, Try Accessing That Movie Again From Our Group. I'll Send You That Movie Privately 🙈__
+__🗣 In Order To Get The Scenepack Requested By You in Our Groups, You Will Have To Join Our Official Channel First. After That, Try Accessing That Scenepack Again From Our Group. I'll Send You That Privately 🙈__
 
 **👇 JOIN THIS CHANNEL & TRY AGAIN 👇**"""
 
