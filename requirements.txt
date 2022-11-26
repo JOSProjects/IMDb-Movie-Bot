@@ -1,5 +1,5 @@
-git+https://github.com/ZauteKm/Pyrogram@master-zip
-tgcrypto==1.2.3
+pyrogram>=2.0.30
+tgcrypto
 pymongo[srv]==3.12.3
 motor==2.5.1
 marshmallow==3.14.1
@@ -13,6 +13,8 @@ aiofiles
 requests
 pyshorteners
 bs4
+pytz
+pynewtonmath
 imdbpy
 youtube-search-python==1.4.6
 youtube_search
