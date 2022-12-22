@@ -15,7 +15,7 @@
       "index",
       "inline"
     ],
-    "website": "https://github.com/JOSProjects/IMDb-Movie-Bot",
+    "website": "https://github.com/Kingmaker003/IMDb-Movie-Bot",
     "repository": "https://github.com/Kingmaker003/IMDb-Movie-Bot",
     "env": {
         "BOT_TOKEN": {
