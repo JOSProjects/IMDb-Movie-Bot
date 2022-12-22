@@ -12,22 +12,22 @@ Just Add me to Your Group As Admin, Hit The Help Button For More Info..</b>"""
 <b>Here Is The Help For My Commands.</b>"""
 
     ABOUT_TXT = """<b>➥ My name: {}
-➥ Creator: <a href='https://t.me/zautekm'>Zaute Km</a>
+➥ Creator: <a href='https://t.me/tamilblasterslinkz'>Tamil Blasters</a>
 ➥ Library: <a href='https://docs.pyrogram.org/'>Pyrogram</a>
 ➥ Language: Python 𝟹
 ➥ Data Base: <a href='https://www.mongodb.com/'>MongoDB</a>
-➥ Bot Server: <a href='https://heroku.com'>Heroku</a>
+➥ Bot Server: <a href=Heroku></a>
 ➥ Build Status: v2.0.1 [ Beta ]"""
 
     SOURCE_TXT = """<b>Source:</b>
 IMDb is a Open source project.
-Source: <a href='https://github.com/josprojects/tgmoviebot'>GitHub - Click here 👈</a>
+Source: <a href=>GitHub - Click here 👈</a>
 
 <b>DEVS:</b>
-- <a href='https://t.me/josprojects'>Jos Projects</a>
+- <a href='https://t.me/Tamilblasterslinkz'>Tamil Blasters</a>
 
 <b>SUPPORT GROUP</b>
-- <a href='https://t.me/+y53tWFUw6Q43NzE9'>Jos Movie Club</a>"""
+- <a href='https://t.me/rcmovierequest'>Rc movies Request</a>"""
 
     MANUALFILTER_TXT = """Help: <b>Filters</b>
 
@@ -279,7 +279,7 @@ Some URLs is Shortner
 • /short <code>(link)</code> - I will send the shorted links.
 
 <b>Example:</b>
-<code>/short https://t.me/josprojects</code>
+<code>/short https://t.me/Tamilblasterslinkz</code>
 
 <b>NOTE:</b>
 • IMDb should have admin privillage.
